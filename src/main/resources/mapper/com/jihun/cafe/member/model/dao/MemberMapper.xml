@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC ".//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jihun.cafe.member.model.dao.MemberMapper">
+
+	<resultMap type="com.jihun.cafe.member.model.dto.MemberDTO" id="memDTO">
+		<id property="no" column="MEMBER_NO" />
+		<result property="name" column="MEMBER_NAME" />
+		<result property="id" column="MEMBER_ID" />
+		<result property="pwd" column="MEMBER_PWD" />
+		<result property="pno" column="MEMBER_PNO" />
+		<result property="gender" column="MEMBER_GENDER" />
+		<result property="email" column="EMAIL" />
+		<result property="address" column="ADDRESS" />
+		<result property="phone" column="PHONE" />
+		<result property="subPhone" column="SUB_PHONE" />
+		<result property="point" column="MEMBER_POINT" />
+		<result property="enrollDate" column="ENROLL_DATE" />
+		<result property="modifiedDate" column="MODIFIED_DATE" />
+		<result property="blackList" column="CHECK_BLACKLIST" />
+		<result property="status" column="MEMBER_STATUS" />
+	</resultMap>
+	
+	<select id="loginMember" resultMap="memDTO" parameterType="String">
+        SELECT
+               A.MEMBER_NO
+             , A.MEMBER_NAME
+             , A.MEMBER_PWD
+             , A.MEMBER_ID
+             , A.EMAIL
+             , A.PHONE
+          FROM MG_MEMBER A
+         WHERE A.MEMBER_ID = #{email}       
+	</select>
+	
+	<select id="selectUserAuthone" resultType="java.lang.String" parameterType="String">
+        SELECT
+               A.ROLE_NAME
+          FROM BB_ROLE A
+          JOIN MG_MEMBER B ON (A.MEMBER_NO = B.MEMBER_NO)     
+         WHERE B.MEMBER_ID = #{ email } 
+	</select>
+	
+</mapper>
