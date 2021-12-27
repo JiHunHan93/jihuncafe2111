@@ -1,0 +1,169 @@
+.update{
+    font-size: 15px;
+    color: #093;
+    margin: 20px 0;
+}
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+#personInfo {
+    margin-bottom: 35px;
+}
+body, div, dl, dt, dd, h1, h2, h3, h4, form, fieldset, p, th, td, input {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    color: #555;
+    line-height: 120%;
+}
+#personInfo .person-tb {
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+}
+table {
+   width: 60%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+body, h1, h2, h3, h4, h5, h6, table, input, select, textarea, a {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #777;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+#personInfo .person-tb th {
+    vertical-align: middle;
+    border-bottom: 1px solid #DDD;
+    background: #FBFBFB;
+}
+.ud{
+   
+    width: 1040px;
+    margin: 70px auto;
+
+}
+.ud h1{
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+    color: #000;
+}
+.ud p.p {
+    font-size: 15px;
+    color: #093;
+    margin: 20px 0;
+    width: 50%;
+  
+}
+.hr{
+    width: 50%;
+}
+.red{
+    color: #ff3333;
+}
+.btn-or{
+    background: #87ceeb;
+    color: #FFF !important;
+    border: 1px #87ceeb solid !important;
+    display: inline-block;
+    display: inline;
+    zoom: 1;
+    padding: 15px 20px;
+    margin-left: 1px;
+    font-size: 15px;
+    line-height: 110%;
+    font-weight: 500;
+    -o-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    transition: all 250ms ease-out;
+}
+.btn-yg-1{
+    background: #FFF;
+    color: #555 !important;
+    border: 1px #DDD solid !important;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 15px 20px;
+    margin-left: 1px;
+    font-size: 15px;
+    line-height: 110%;
+    font-weight: 500;
+    -o-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
+    transition: all 250ms ease-out;
+}
+.btn-ygs{
+    background: #87ceeb;
+    color: #FFF !important;
+    border: 1px #87ceeb solid !important;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 4px 9px;
+    margin-left: 1px;
+    font-size: 11pt;
+    line-height: 1;
+    font-weight: 400;
+}
+#personInfo .person-tb td,tr         {
+    vertical-align: middle;
+    border-bottom: 1px solid #DDD;
+    background: #FBFBFB;
+}
+.red, .red1{
+    font-size: 15px;
+    padding: 15px;
+}
+.a{
+    margin-right: 5px;
+    border: 1px solid #DDD;
+    line-height: 37px;
+    height: 37px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+/********************************************/
+/*헤더*/
+.header_area{
+    width: auto;
+    height: 250px;
+    
+    background: lightgray;
+    text-align: center;
+    
+}
+/*푸터*/
+.footer_area{
+    width: auto;
+    height: 150px;
+    
+
+    
+    background: lightgray;
+    text-align: center;
+}
+.img_area{
+    margin-left: 25%;
+}

@@ -1,0 +1,96 @@
+@charset "UTF-8";
+    
+.gongji{
+    background: rgb(255 255 255);
+    width: 1000px;
+    height: 900px;
+    margin-left: -30px;
+    border: 1px solid #b4b4b4;
+}
+/*자주묻는 질문 운영정보*/
+.info{
+    width: 80%;
+    height: 100px;
+    background: rgb(235 251 255);
+    margin: 100px;
+    
+}
+
+/* 공지사항 리스트 테이블 설정 */
+.outer-notice-list table,
+.outer-thumbnail-insert table {
+	
+	text-align:center;
+}
+/* .outer-review-list{
+	width: 1000px; 
+	} */
+/* 모든 테이블 중앙 배치할 수 있는 설정 */
+/* .table-area {
+	width: 1000px;
+	margin-left:auto;
+	margin-right:50px;
+}
+ */
+/* 테이블 영역 크기 지정 */
+/* .outer-notice-list .table-area, 
+.outer-notice-detail .table-area, 
+.outer-board-list .table-area,
+.outer-board-insert .table-area {
+	width:980px;
+	height:600px;
+} */
+
+.main-header{
+    border: 1px solid #bebebe;
+    text-align: center;
+    width:1070px;
+}
+.q-table {
+    border: 1px solid #adadad;
+    text-align: center;
+    width: 163px;
+    height: 50px;
+    background: #ffffff;
+    font-size: 20px;
+}
+.question-table :hover{
+    background: #e7ffff;
+    
+}
+
+.question-list{
+    
+    width: 800px;
+    height: 45px;
+    line-height: 50%;
+    background-color: rgb(222 245 255);
+    border-radius: 8px;
+}
+
+.question-empty{
+    height: 20px;
+    
+}
+.main-text,.q-table{
+	font-family: 'Jua', sans-serif;
+	font-size:20px;
+	margin-left:18px;
+	
+}
+.info-text-title{
+	font-family: 'Jua', sans-serif;
+	font-size:60px;
+	margin-left:18px;						
+}
+
+.info-text{
+	font-family: 'Jua', sans-serif;
+	font-size:25px;
+	margin-left:18px;						
+}
+.sidebar-text{
+	font-family: 'Jua', sans-serif;
+	
+	
+}

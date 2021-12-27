@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* BASIC css start */
+#todayWrap {text-align:center; width:100px; margin-top:20px; }
+
+#todayWrap div.vhd {border:1px #EEE solid; background-color:#FFF; text-align: center; }
+#todayWrap div.vhd a {display:block; background-color: transparent;padding:7px 0 10px 0; border-bottom:1px solid #eee; font-size: 9pt; line-height: 1; transition: background-color, color 250ms ease-out;}
+#todayWrap div.vhd a:hover {color:#000; }
+#todayWrap div.vhd a.first { background:#093; color:#fff; outline:1px solid #093; margin-top:1px; border:0; }
+
+#todayWrap div.ft {}
+#todayWrap div.ft a {display:block; padding:5px;}
+#todayWrap div.ft a span {display:block; border: 1px solid #DDD; background:transparent url('http://cdn010.negagea.net/slimcook/slim/slimcook/img20180622/quick_top.png') no-repeat; width:50px; height:50px; margin:0 auto; text-indent:-9999em;}
+
+#todayWrap ul.cont {border:0solid #DDD; padding:10px 0; margin:5px 0;}
+#todayWrap ul.cont li a { display: inline-block; }
+#todayWrap ul.cont li img { width: 98px; height: 98px; border: 1px solid #DDD; border-radius:50%; overflow:hidden; box-shadow: 0 1px 2px rgba(0,0,0,.03);}
+#todayWrap ul.cont li { padding-bottom:10px; }
+
+div#todayWrap div.qwrap {position:relative; z-index:450; padding-top:0;}
+div#todayWrap div.qwrap.flow {position:fixed; top: 70px; left: 50%; margin-left: 560px; width:100px;}
+/* BASIC css end */
+

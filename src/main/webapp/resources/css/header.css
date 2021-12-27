@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+div#hdWrap {width:100%; position: relative; z-index:3; background-color:#FFF;}
+div#branding { position: relative; z-index:1; /* margin-top: 150px; */ border-top: 1px solid #EEE; border-bottom: 2px solid skyblue; background-color:#FFF; }
+div#branding.flow { position: fixed; left: 0; top: -6px; width: 100%; z-index:99; margin-top: 0;  }
+div#branding:after {content:''; display:block; clear:both;}
+div#branding ul.gnb {display:block; width:1100px; margin:0 auto;}
+div#branding ul.gnb:after {content:''; display:block; clear:both;}
+div#branding ul.gnb li { float:left; width:13.56%; position:relative; z-index:999999999; text-align:center; transition: width 10ms ease-out; margin: 0 2% 0 2%; }
+div#branding.flow ul.gnb li { width: 12.72%; }
+div#branding ul.gnb li.first {width:55px;}
+div#branding ul.gnb li.flow_home { width:55px; display: none; }
+div#branding ul.gnb li a {display:block; font-size:15px; line-height:15px; font-weight:700; transition: background-color, color, padding 10ms ease-out; }
+div#branding ul.gnb li.first a {text-indent:-99999999em; font-size:0; line-height:0; background:#87ceeb url(http://cdn010.negagea.net/slimcook/slim/slimcook/img20180622/allCategoryIcon.png) no-repeat; width:55px; height:53px; color:#FFF; }
+div#branding ul.gnb li.first a:hover {  }
+div#branding ul.gnb li.first a.toggle {background-position:0 -55px;}
+div#branding ul.gnb li a.mn span { position:absolute; z-index:1; left:0; top:0; display: none; }
+div#branding ul.gnb li a.mn { background-color:#FFF; display:block; padding:19px 0; color:#000; transition: color 250ms ease-out; }
+div#branding ul.gnb li a.mn em { color:#888; }
+div#branding ul.gnb li a.mn:hover { color: skyblue; }
+div#branding ul.gnb li a.mn.pointColorg {background:#eee; color: #000; font-size:12px; transition: color 250ms ease-out; }
+div#branding ul.gnb li a.mn.pointColorg:hover {background:#eee;}
+div#branding ul.gnb li a.mn.pointColorw {background:#fff; color: skyblue; font-size:12px; transition: color 250ms ease-out;}
+div#branding ul.gnb li a.mn.pointColorw:hover {background:#fff;}
+div#branding ul.gnb li.last { width:75px; }
+
+div#branding.flow ul.gnb li a.mn { padding:23px 0 15px; }
+div#branding.flow ul.gnb li.flow_home { display: block; }
+div#branding.flow ul.gnb li.flow_home a.mn { text-indent:-99999999em; font-size:0; line-height:0; padding: 0; background:#ffd038 url(http://cdn010.negagea.net/slimcook/slim/slimcook/img20180622/logo_icon.png) no-repeat; width:55px; height:53px; color:#FFF; } 
+
+   /* 카테고리메뉴 (중분류 )*/
+   div#branding ul.gnbLayer li dl {position:absolute; z-index:9; left:50%; top:53px; margin-left:-87px; display:none; background:#FFF; border:1px #232f4a solid; width:172px; box-shadow: 0 0 0 1px rgba(0,0,0,.01),0 1px 5px rgba(0,0,0,.1);}
+   /*div#branding ul.gnbLayer li.last dl {margin-left:-95px !important;}*/
+   div#branding ul.gnbLayer li dt {text-indent:-9999em; display:none;}
+   div#branding ul.gnbLayer li dd {display:block; border-top:1px #EEE dashed;}
+   div#branding ul.gnbLayer li dd.first {border:0;}
+   div#branding ul.gnbLayer li dd a {display:block; padding: 15px; color:#292622; font-size:9pt; font-weight:bold; line-height:110%; background:#FFF;}
+   div#branding ul.gnbLayer li dd a:hover { background:#FBFBFB;}
+   div#branding ul.gnbLayer li dd a.active {padding-left:15px; background:transparent url(./img/side_arrow.png) no-repeat 5px 50%; color:#292622;}
+
+/* 상단 서브메뉴 숨김 */
+div#branding .snb {display:none; width:100%; position:absolute; top:308px; text-align:center; background:#FFF;}
+div#branding .snb li { position: relative; z-index:1; padding-left:10px; margin-left:10px; border-left:1px #DDD solid; display:inline-block; *display:inline; zoom:1;}
+div#branding .snb li.first { padding:0; margin:0; border:0; }
+div#branding .snb li > a { display: inline-block; font-size:9pt; line-height:14px; color:#777;}
+div#branding .snb li > a strong {color:skyblue;}
+div#branding .snb li > a:hover {color:#333;}
+
+
+/* 헤더 상단 영역*/
+div#hdTop { display:block; position: relative; z-index: 5; width: 1100px; height: 150px; margin:0 auto;  }
+div#hdTop:after { content:''; display:block; clear:both; }
+
+div#hdTop ul.hutil { position: absolute; z-index: 2; left: 0; top: 0; width:1100px; border-bottom:1px solid #eee; }
+div#hdTop ul.hutil li { float:left; outline:1px solid #eee; padding:7px 10px; background:#F5F5F5; }
+div#hdTop ul.hutil li.fr { float:right; outline:1px solid #FFF; border-bottom:1px solid #eee; background:#FFF; }
+div#hdTop ul.hutil li a { font-size:13px; color:#999; transition: color 250ms ease-out; }
+div#hdTop ul.hutil li a:hover { color:#000; }
+div#hdTop ul.hutil li a i.fav { width:16px; display:inline-block; background:url(/mg/resources/image/icon_star.png) no-repeat; background-size:13px; background-position-y:4px; }
+div#hdTop ul.hutil li a i.tel { width:16px; display:inline-block; background:url(/mg/resources/image/icon_tel.png) no-repeat; background-size:13px; background-position-y:4px; }
+div#hdTop ul.hutil li.fr span { background:skyblue; color:#FFF; font-weight:500; padding:1px 5px; font-size:9px; }
+div#hdTop ul.hutil li.point a { color:skyblue; }
+
+div#hdTop h1 { padding: 48px 0 0 20px; z-index: 3; left: 30px; top: 80px; }
+div#hdTop h1 a { display:block; width: 208px; height: 52px; background:transparent no-repeat; text-indent:-9999em; font-size:0; line-height:0; }
+div#hdTop h1 a blockquote { display:none; text-indent:-9999em; }
+
+div#hdTop form { position: absolute; z-index: 2; left: 50%; top: 57px; margin-left: -150px; overflow:hidden; }
+div#hdTop form p { font-size: 12px; color: #999; margin-bottom: 7px; }
+div#hdTop form fieldset { border: 2px solid skyblue; border-radius: 0 0 10px 0; padding: 0 10px; }
+div#hdTop form fieldset input { float: left; border: 0; background: #FFF; width: 230px; height: 30px; font-size: 15px; margin-right: 10px; }
+div#hdTop form fieldset button { float: left; display: block; width: 35px; height: 30px; background: #FFF url(/mg/resources/image/icon_search.png) no-repeat 50% 50%; background-size: 20px; }
+div#hdTop form:after {content:''; display:block; clear:both;}
+
+div#hdTop .hbanner { position: absolute; z-index: 2; right: 25px; top: 63px; }
+
+
+.opacity-1{ visibility: hidden; }
+
+
+
+
+/* 상단 부가메뉴들 */
+div#header_menu { position: relative; z-index:1; }
+div#header_menu div.inner { display:block; position: relative; z-index:5; width: 1100px; height:120px; margin:0 auto; }
+div#header_menu div.inner:after {content:''; display:block; clear:both;}
+
+div#header_menu div.inner div.hdAdd {position:absolute; z-index:2; top: 60px; left:0; }
+div#header_menu div.inner div.hdAdd ul {display:block; }
+div#header_menu div.inner div.hdAdd ul:after {content:''; display:block; clear:both;}
+div#header_menu div.inner div.hdAdd ul li {float:left; margin-left:30px; }
+div#header_menu div.inner div.hdAdd ul li.first { margin-left:0px; }
+div#header_menu div.inner div.hdAdd ul li.mr_t { margin-top:30px; }
+div#header_menu div.inner div.hdAdd ul li a strong { position: relative; z-index: 1; display:inline-block; *display:inline; zoom:1; font-size:15px; line-height:35px; padding-left:15px; }
+div#header_menu div.inner div.hdAdd ul li a strong:after { content: ''; position: absolute; left: 0; top: 50%; margin-top: -5px; display: block; width: 10px; height: 10px; border-radius: 10px; background-color: skyblue; }
+div#header_menu div.inner div.hdAdd ul li a:hover strong { color:#333; }
+
+/* 검색 기능 */
+div#header_menu div.inner fieldset { position:absolute; z-index:2; top: 90px; left:50%; border:1px #EEE solid; border-radius:0px; overflow:hidden;  }
+
+div#header_menu div.inner fieldset:after {content:''; display:block; clear:both;}
+div#header_menu div.inner fieldset input {float:left; border:0; background:#FBFBFB; padding-left:10px; width:175px; height:35px; }
+div#header_menu div.inner fieldset button {float:left; display:block; border-left:1px #DDD solid; width:45px; height:35px; background:skyblue url(http://cdn010.negagea.net/slimcook/slim/slimcook/img20180622/searchBtn.png) no-repeat 50% 50%; background-size: 30px; }
+div#header_menu div.inner fieldset:hover { border:1px skyblue solid; }
+div#header_menu div.inner fieldset input:focus { background-color: #FFF; }
+
+div#header_menu div.inner h1 {position:absolute; z-index:3; left: 30px; top: 55px; }
+div#header_menu div.inner h1 a {display:block; width: 208px; height: 33px; background:transparent url(http://cdn010.negagea.net/slimcook/slim/slimcook/img1911/logo.png) no-repeat; text-indent:-9999em; font-size:0; line-height:0;}
+div#header_menu div.inner h1 a blockquote {display:none; text-indent:-9999em;}
+div#header_menu div.inner ul.tnb {display:block; zoom: 1; position: absolute; top: 0; }
+div#header_menu div.inner ul.tnb li { position: relative; z-index:1; display:block; float:left;}
+div#header_menu div.inner ul.tnb li a {display: inline-block; *display:inline; zoom:1; margin-left:10px; padding:8px 0 11px 0px; font-size:12px; height:14px; color:#333; }
+div#header_menu div.inner ul.tnb li a:hover {color:;}
+div#header_menu div.inner ul.tnb li.first a {margin:0;}
+
+/* 회원정보 추출 */
+div#header_menu div.inner ul.tnb-r li.first a span {border:1px #EEE solid; background:#FBFBFB; font-size:8pt; line-height:110%;}
+div#header_menu div.inner ul.tnb-r li.first.mini_login {display:none;}
+
+/* 마이페이지 레이어 */
+div#header_menu div.inner ul.tnb li.mymn {}
+div#header_menu div.inner ul.tnb li.mymn span.mymnly {display:block; width:84px; position:absolute; z-index:3; border:1px solid #545454; background-color:#FFF; visibility:hidden; left:0px; top:28px; padding:0; margin:0;}
+div#header_menu div.inner ul.tnb li.mymn span.mymnly a {display:block !important; font-size:11px; line-height:12px; color: #545454; text-align:left; padding: 5px 5px; margin:0; background-color:#FFF;}
+div#header_menu div.inner ul.tnb li.mymn span.mymnly a:hover {color:#FFF; background-color:#FF6600;}
+div#header_menu div.inner ul.tnb li.mymn a.mparr {padding-right:15px; background:url(/design/slimcook/mimg/mypage_icon.gif) no-repeat 100% 50%;}
+
+
+/* 즐겨찾기 추가 영역 */
+div#header_menu div.inner ul.tnb-l { left:0; }
+/*
+div#header_menu div.inner ul.tnb li.favorite a { padding-left:35px; background:transparent url("http://cdn010.negagea.net/slimcook/slim/slimcook/img20180622/icon_favorite.png") no-repeat 15px 10px; }
+div#header_menu div.inner ul.tnb li.call a { padding-left:40px; background:transparent url("http://cdn010.negagea.net/slimcook/slim/slimcook/img20180622/icon_call.png") no-repeat 17px 10px; }
+div#header_menu div.inner ul.tnb li.community a { padding-left:40px; background:transparent url("http://cdn010.negagea.net/slimcook/slim/slimcook/img20180622/icon_call.png") no-repeat 17px 10px; }
+*/
+
+/* 상단 회원메뉴들 */ 
+div#header_menu div.inner ul.tnb-r { right: 0px; padding-right:15px;}
+div#header_menu div.inner ul.tnb-r li {}
+div#header_menu div.inner ul.tnb-r li.first{ border: none; margin:0; padding:0;}
+div#header_menu div.inner ul.tnb-r li a { }
+div#header_menu div.inner ul.tnb-r li a strong {color:skyblue;}
+div#header_menu div.inner ul.tnb-r li a strong.point {color:#333;} /* 장바구니 갯수, 고객센터  */
+div#header_menu div.inner ul.tnb-r li a.membtn {border:1px #AAA solid; padding:3px 20px 3px 20px; margin:5px; border-radius:1px; font-size:12px; line-height:12px;background-color:#FBFBFB; }
+div#header_menu div.inner ul.tnb-r li a.membtn.point {background-color:#FBFBFB; color:#292622; border:1px #AAA solid; }
+div#header_menu div.inner ul.tnb-r li a.push {position:relative; z-index:1; display:inline-block; *display:inline; zoom:1; padding-left:30px; padding-right:10px; background:url("http://cdn010.negagea.net/slimcook/slim/slimcook/img20180622/icon_messicon.gif") no-repeat 15% 50%; }
+div#header_menu div.inner ul.tnb-r li a.push span.push {position:absolute; z-index:1; left:90%; top:10%; background-color:skyblue; color:#FFF; display:inline-block; *display:inline; zoom:1; padding:2px 5px; font-size:7pt; line-height:10px; border-radius:30px 30px 30px 30px;  }
+
+/* 상단 로그인영역 */
+#suff_login {width: 290px; height: 24px; padding:3px 2px}
+#suff_login fieldset {padding:0; margin:0; font-size:0; line-height:0; clear:both;}
+#suff_login fieldset:after {content:''; display:block; clear:both;}
+#suff_login fieldset span.dsc {float:left; display:block; padding:2px 3px; color:#999; font-size:11px; line-height:24px; vertical-align:top;}
+#suff_login fieldset input {float:left; height: 22px; line-height: 22px; border:1px #DDD solid; width:100px; vertical-align:top; background:#F2F2F2; color:#222; -o-border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+#suff_login fieldset input:focus {background:#DDD; color:#222; border:1px #AAA solid;}
+#suff_login fieldset label.security {display:none;}
+/* #suff_login fieldset a {float:left; display:block; background:#444; color:#FFF; padding:0 !important; padding:2px; margin:0; font-size:11px; line-height:11px; vertical-align:top;} */
+#suff_login fieldset .log-btn {display:inline-block;  height: 24px; line-height: 24px; padding:0 !important; padding:0px 5px !important; border: 0; margin-left:2px !important; background-color: #232f4a; color: #FFF !important; font-size:10px; vertical-align:top; -o-border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+
+/* 상단 검색바 */
+#branding .search { width: 202px; height: 22px; border: 1px solid #DDD; background:#FFF; margin-top:-6px;}
+#branding .search:after { content: ""; clear: both; display: block; }
+#branding .search .keyword { display:inline-block; width: 170px; height: 20px; line-height: 20px; padding-left: 5px; color: #777;  border:0;}
+#branding .search a { margin:0; padding:0;}
+#branding .search a .sch-btn { display:inline-block; width: 16px; height: 16px; padding:5px; border: 0; background:transparent url(http://cdn010.negagea.net/slimcook/slim/styleboy/img/bg_btn_search.png) no-repeat 50% 50%; text-indent:-9999em;}
+
+
+/* 전체 카테고리   */
+div#allCategoryArea { position:relative; z-index:999999; width:1100px; margin:0 auto; display: none; }
+div#allCategoryArea.toggle { display: block; }
+div#allCategoryArea div.allCategoryView {position:absolute; left: 21px; top: 0px; width:1057px; padding: 20px 20px 20px 106px; border: 2px skyblue solid; background-color: rgba(255,255,255, 1); display: block; box-shadow: 0 0 0 1px rgba(0,0,0,.01),0 1px 5px rgba(0,0,0,.1);}
+div#allCategoryArea div.allCategoryView:after { content:''; display:block; clear:both; }
+div#allCategoryArea div.allCategoryView h2 {float: right; display:block; width:210px; height: 100%; background-color:#555; }
+div#allCategoryArea div.allCategoryView h2 a { display: block; }
+div#allCategoryArea div.allCategoryView h2 a img { width: 210px; height: 360px; }
+div#allCategoryArea div.allCategoryView div.categoryMenus {float: left; width:830px; }
+div#allCategoryArea div.allCategoryView div.categoryMenus h3 { display: block; width: 100%; padding: 15px 0 5px; color: #999; font-size:14px; }
+div#allCategoryArea div.allCategoryView div.categoryMenus h3 strong { text-transform: uppercase; color: skyblue; font-weight:500; }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory {display:block; width:100%; }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul:after { content:''; display:block; clear:both; }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li { float:left; width:162px; margin-left:5px; background-color: TRANSPARENT; transition: background-color 250ms ease-out; }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li:hover {   }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li.first { margin-left:0; }
+
+/* 서브카테고리 영역 디자인 설정 */
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl { border:1px #DDD solid; height: 201px; }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl dt { display: block; font-weight: 500; text-align:center; background-color:skyblue; }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl dt a { display: block; padding: 10px 0; color: #FFF; font-size:14px;  }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li:hover dl dt a { color: #FFF; }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl dd {  }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl dd a { display: block; padding:5px 0 5px 10px; color: #777; transition: color 250ms ease-out;  }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl dd a:hover { color: #292622;  }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl dd.imgInner {  }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl dd.imgInner a { padding: 0; }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl dd.imgInner a img { width: 160px; }
+div#allCategoryArea div.allCategoryView div.categoryMenus > ul.subcategory > li dl dd strong { font-weight:500; color:skyblue;  }
+
+/* 커뮤니티 영역 디자인 설정 */
+div#allCategoryArea div.allCategoryView div.categoryMenus ul.community { display: block; width: 100%; }
+div#allCategoryArea div.allCategoryView div.categoryMenus ul.community:after { content:''; display:block; clear:both; }
+div#allCategoryArea div.allCategoryView div.categoryMenus ul.community li { float: left; width: 20%; }
+div#allCategoryArea div.allCategoryView div.categoryMenus ul.community li a { display: block; padding: 10px; border:1px #DDD solid; text-align:center; margin: 1px 0 1px  -1px; background-color: TRANSPARENT; transition: all 250ms ease-out; font-size:14px; }
+div#allCategoryArea div.allCategoryView div.categoryMenus ul.community li a:hover { background-color: skyblue; color: #FFF;   }
+
+
+/* 리바이 알림 */
+.rebuy_banner { position: absolute; right: 0; top: 61px; padding: 10px; background-color: #FFF2A9; width: 120px; text-align: center; }
+.rebuy_banner strong { font-size: 20px; }
+.rebuy_banner .rebuy-link { font-size: 15px; font-weight: bold; }
+.rebuy_text { text-align:center; color:#fff; font-size:19px; display:block; letter-spacing:-0.5px; line-height:260%; font-weight:500; }
+.rebuy_text strong { color:#fd3; font-weight:700; }
+                                            
+
+/* BASIC css end */

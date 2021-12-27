@@ -10,6 +10,8 @@ public interface MemberMapper {
 	
 	MemberDTO loginMember(String username);
 	
+	MemberDTO viewMemberDetailInfo(String username);
+	
 	List<String> selectUserAuthone(String username);
 	
 }

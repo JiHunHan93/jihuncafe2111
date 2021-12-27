@@ -1,0 +1,55 @@
+
+  .fakeimg {
+    height: 200px;
+    background: white;
+  }
+  .fakeimg1 {
+    height: 200px;
+    background:white;
+    width: 300px;
+  }
+  .area1{
+    height: 155px;
+    width: 400px;
+    float: left;
+    background-color: white;
+    margin-top: 20px;
+    margin-right: 27px;
+    border: 4px solid gray;
+  }
+  .area2{
+    height: 155px;
+    width: 300px;
+    float: left;
+    margin-top: 20px;
+    background-color: white;
+    border: 4px solid gray;
+  }
+
+  
+.h{
+  font-size: 18px;
+  text-align: center;
+}
+/*헤더*/
+.header_area{
+  width: auto;
+  height: 250px;
+  
+  background: lightgray;
+  text-align: center;
+  
+}
+/*푸터*/
+.footer_area{
+  width: auto;
+  height: 150px;
+  
+
+  
+  background: lightgray;
+  text-align: center;
+}
+
+
+  

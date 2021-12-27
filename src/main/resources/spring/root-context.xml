@@ -63,39 +63,10 @@
 	</aop:config>
 		
 	
-	<mybatis-spring:scan base-package="com.jihun.cafe.member.model.dao"/>
+	<mybatis-spring:scan base-package="com.jihun.cafe.member.model.dao,
+	                                   com.jihun.cafe.cannedcoffee.model.dao,
+	                                   com.jihun.cafe.coldbrew.model.dao,
+	                                   com.jihun.cafe.greenbeans.model.dao,
+	                                   com.jihun.cafe.roastingbeans.model.dao,
+	                                   com.jihun.cafe.payment.model.dao"/>
 </beans>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

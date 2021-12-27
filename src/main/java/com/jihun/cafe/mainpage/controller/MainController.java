@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MainController {
 	
-	@GetMapping(value= {"/"})
+	@GetMapping(value= {"/", "main"})
 	public String mainPage() {
 		
 		System.out.println("=======================");

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+.fs .fss .btn.btn-yg {
+	background:yellowgreen;
+	width:560px;
+	height: 40px;
+    border-radius: 30px / 30px;
+}
+
+/*오렌지레드색 버튼*/
+.btn-or {
+    border-radius: 30px / 30px;
+	background:orangered;
+	width:560px;
+	height: 40px;
+}
+
+.class1{
+	    width: 94%;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 2% 3%;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#for{
+	font-size: 17px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+  
+}
+.class{
+width: 94%;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 2% 3%;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#form{
+    display: block;
+    width: 560px;
+    margin: 0 auto 0;
+    padding: 30px 0;
+    font-size: 14px;
+   
+}
+.fs{
+display: block;
+    width: 560px;
+    margin: 0 auto 0;
+    border: 3px;
+    font-size: 14px;
+    padding: 0 20px;
+    
+    
+    
+}
+.id2{
+width: 94%;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 2% 3%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width:560px;
+    
+}
+#login1{
+display: block;
+    font-size: 19px;
+    padding: 12px 0;
+    background: #093;
+    color: #FFF;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+
+}
+.find{
+
+display: block;
+    font-size: 14px;
+    padding: 8px 0;
+    background: #FFF;
+    color: #999;
+    border: 1px solid #ccc;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 30px / 30px;
+}
+.btn{
+
+color: #FFF;
+}
+.find1{
+display: block;
+    font-size: 16px;
+    padding: 12px 0;
+    background: #282828;
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#chksaveId{
+font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    color: #555;
+    line-height: 120%;
+}
+.security{
+font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    color: #555;
+    line-height: 120%;
+}
+.img{
+	background:url("../image/login.png") no repeat;
+		background-size:cover;
+	margin-left:50px;
+}

@@ -1,0 +1,31 @@
+.d1{
+	
+	display: block;
+    width: 560px;
+    margin: 0 auto 0;
+    font-size: 14px;
+    padding: 0 20px;
+}
+.input{
+
+margin-right: 5px;
+    border: 1px solid #DDD;
+    line-height: 37px;
+    height: 37px;
+    padding: 0 10px;
+    font-size: 14px;
+    width:300px;
+    margin: 0 auto 0;
+}
+#pwd{
+display: inline-block;
+    font-size: 16px;
+    padding: 12px 20px;
+    background: #093;
+    color: #FFF;
+    text-align: center;
+     
+}
+.find{
+margin: 0 auto 0;
+}

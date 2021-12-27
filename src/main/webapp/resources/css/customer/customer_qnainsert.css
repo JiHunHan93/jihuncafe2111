@@ -1,0 +1,217 @@
+	@charset "UTF-8";
+
+/* 사이드바 래퍼 스타일 */
+
+#page-wrapper {
+    padding-left: 290px;
+    }
+    /*사이드바 기본 세팅*/
+    #sidebar-wrapper {
+    position: fixed;
+    width: 170px;
+    height: auto;
+    margin-left: -200px;
+    background: rgb(241, 234, 191);
+    border-radius: 30px / 30px;
+  
+    
+    
+    }
+    /*wrapper*/
+    #page-content-wrapper {
+      
+    width: 100%;
+    padding: 20px;
+    margin-left:-150px;
+    }
+    /* 사이드바 마우스 올렸을때 스타일 */
+    .sidebar-nav :hover{
+        background: rgb(192, 227, 248);
+        border-radius: 80px / 80px;
+    }
+    .sidebar-nav {
+    width: 170px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+    
+    .sidebar-nav li {
+      
+    text-indent: 1.5em;
+    line-height: 2.8em;
+    }
+    
+    .sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    height: 70px;
+    line-height: 70px;
+    color:black;
+    }
+    /*사이드바 제목(상단)기본 색*/
+    .sidebar-brand{
+      background: rgb(229, 206, 248);
+      width: 170px;
+      height: auto;
+    }
+    .wishList-List{
+      width: 80%;
+      height: auto;
+    }
+    
+.gongji{
+background: rgb(255 255 255);
+width:1000px;
+height: 835px;
+margin-left: -30px;
+}
+/*자주묻는 질문 운영정보*/
+.info{
+    width: 80%;
+    height: 100px;
+    background: rgba(247, 189, 122, 0.384);
+    margin: 100px;
+}
+
+/* 공지사항 리스트 크기 지정 */
+.outer-notice-list,
+.outer-notice-detail {
+	width:1000px;
+    height: 880px;
+    border:1px solid rgb(190, 190, 190);
+    margin-left: 0px;
+    
+}
+.writer-name{
+    
+    margin-left :700px;
+}
+
+/* 게시판 리스트 크기 지정 */
+.outer-board-list {
+	width:900px;
+	height:500px;
+}
+
+/* 공지사항 리스트 테이블 설정 */
+.outer-notice-list table,
+.outer-thumbnail-insert table {
+	
+	text-align:center;
+}
+
+/* 모든 테이블 중앙 배치할 수 있는 설정 */
+.table-area {
+	margin-left:auto;
+	margin-right:50px;
+}
+
+/* 테이블 영역 크기 지정 */
+.outer-notice-list .table-area, 
+.outer-notice-detail .table-area, 
+.outer-board-list .table-area,
+.outer-board-insert .table-area {
+	width:650px;
+	height:600px;
+}
+
+/* 공지사항, 게시판 관련 테이블 테두리 지정 */
+.outer-notice-list table,
+.outer-notice-detail table,
+.outer-board-list table {
+	
+	text-align:center;
+}
+
+/* 공지사항 상세보기 테이블 사이즈 조정 */
+.outer-notice-detail table,
+.outer-board-insert table {
+	width: 500px;
+}
+.search-area {
+	width:100%;
+	
+}
+/* 공지사항 작성 영역 크기 지정 */
+.outer-notice-insert {
+	width:750px;
+	height:100%;
+}
+
+/* 공지사항 작성 영역 테이블 테두리 지정 */
+.outer-notice-insert table,
+.outer-board-insert table {
+    width:750px;
+	height:650px;
+	
+}
+
+/* 공지사항 작성 영역 테이블 영역 크기 지정 */
+.outer-notice-insert .table-area,
+.outer-board-insert .table-area {
+	width:750px;
+	height:100%;
+	float: left;
+	}
+.main-header{
+    border:1px solid black;
+    text-align: center;
+    width:1000px;
+    height: auto;
+}
+.q-table {
+    border: 1px solid black;
+    text-align:center;
+    width: 163px;
+    height: 50px;
+    background: wheat;
+}
+.question-table :hover{
+    background: chartreuse;
+}
+
+
+
+.question-list{
+    
+    width: 800px;
+    height: 45px;
+    line-height: 50%; 
+    background-color: rgb(210, 243, 238); 
+    border-radius: 30px / 30px;   
+}
+
+
+.question-empty{
+    height: 20px;
+}
+
+.notice_header_txt{font-size: 25px;height: 50px;
+    width: 1000px;
+    line-height: 50px;
+    text-align: center;
+    padding: 15px 191px 0 100px;}
+    
+.container-fluid{width: 1000px;}
+
+.notice-detail_btn{margin: 0 40px 0 40px;}
+
+.notice_detail_header_txt{font-size: 20px; margin: 8px 0 24px 0;}
+
+.innerText {
+	
+}
+.button{
+	margin-left:280px;
+}
+.buttons{
+    font-family: 'Jua', sans-serif;
+    padding: 3px 20px;
+    font-size: 20px;
+    background: rgb(196 238 255);
+    color: rgb(3, 3, 3) !important;
+    border: 0;
+    margin-left: 0%;
+    border-radius: 12px;
+}

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC ".//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jihun.cafe.payment.model.dao.PaymentMapper">
+
+	<resultMap type="com.jihun.cafe.goods.model.dto.MgGoodsDTO" id="goodsDTO">
+		<id property="no" column="GOODS_NO" />
+		<result property="name" column="GOODS_NAME" />
+		<result property="price" column="GOODS_PRICE" />
+		<result property="typeNo" column="GOODS_TYPE_NO" />
+		<result property="writerMemberNo" column="GOODS_WRITER_MEMBER_NO" />
+		<result property="status" column="GOODS_STATUS" />
+		<result property="createdDate" column="CREATED_DATE" />
+		<result property="modifiedDate" column="MODIFIED_DATE" />
+		<result property="typeName" column="GOODS_TYPE_NAME" />
+		<result property="attachNo" column="ATTACHMENT_NO" />
+		<result property="originName" column="ORIGINAL_NAME" />
+		<result property="savedName" column="SAVED_NAME" />
+		<result property="savedPath" column="SAVE_PATH" />
+		<result property="fileType" column="FILE_TYPE" />
+		<result property="thumbPath" column="THUMBNAIL_PATH" />
+	</resultMap>
+
+	<resultMap type="com.jihun.cafe.order.model.dto.OrderDTO" id="orderDTO">
+		<id property="no" column="ORDER_NO" />
+		<result property="orderDate" column="ORDER_DATE" />
+		<result property="orderTitle" column="ORDER_TITLE" />
+		<result property="amountPrice" column="AMOUNT_PRICE" />
+		<result property="memberNo" column="ORDER_MEMBER_NO" />
+	</resultMap>
+
+	<resultMap type="com.jihun.cafe.order.model.dto.OrderGoodsDTO" id="orderGoodsDTO">
+		<id property="orderNo" column="ORDER_NO" />
+		<result property="goodsNo" column="GOODS_NO" />
+		<result property="amountCount" column="AMOUNT_COUNT" />
+		<result property="goodsPrice" column="ORDER_GOODS_PRICE" />
+	</resultMap>
+
+	<resultMap type="com.jihun.cafe.order.model.dto.OrderDeliveryDTO" id="orderDeliveryDTO">
+		<id property="no" column="DELIVERY_NO" />
+		<result property="type" column="DELIVERY_TYPE" />
+		<result property="transitNo" column="TRANSIT_NO" />
+		<result property="orderNo" column="ORDER_NO" />
+	</resultMap>
+
+	<resultMap type="com.jihun.cafe.order.model.dto.OrderAddressDTO" id="orderAddressDTO">
+		<id property="no" column="ORDER_ADD_NO" />
+		<result property="orderDeliNo" column="DELIVERY_NO" />
+		<result property="addType" column="ORDER_ADD_TYPE" />
+		<result property="recieverName" column="RECIEVER_NAME" />
+		<result property="recieverPhone" column="RECIEVER_PHONE" />
+		<result property="recieverAdd" column="RECIEVER_ADDRESS" />
+		<result property="memberNo" column="MEMBER_NO" />
+		<result property="memAddNo" column="ADDRESS_NO" />
+	</resultMap>
+
+	<resultMap type="com.jihun.cafe.payment.model.dto.PaymentDTO" id="paymentDTO">
+		<id property="no" column="PAYMENT_NO" />
+		<result property="finalPrice" column="FINAL_PAYMENT_PRICE" />
+		<result property="usedPoint" column="USED_POINT" />
+		<result property="status" column="PAYMENT_STATUS" />
+		<result property="PaymentDate" column="PAYMENT_DATE" />
+		<result property="memberNo" column="PAYMENT_MEMBER_NO" />
+		<result property="orderNo" column="PAYMENT_ORDER_NO" />
+	</resultMap>
+
+	<resultMap type="com.jihun.cafe.payment.model.dto.PaymentDivisionDTO" id="paymentDivisionDTO">
+		<id property="no" column="DIVISION_NO" />
+		<result property="paymentNo" column="DIVISION_PAYMENT_NO" />
+		<result property="admissionPayNo" column="ADMISSION_PAYMENT_NUM" />
+		<result property="refundRequest" column="REFUND_REQUEST" />
+		<result property="refundDate" column="REFUND_DATE" />
+	</resultMap>
+
+	<resultMap type="com.jihun.cafe.member.model.dto.MemberPointDTO" id="memberPointDTO">
+		<id property="no" column="POINT_NO" />
+		<result property="changedType" column="CHANGED_POINT_TYPE" />
+		<result property="paymentNo" column="PAYMENT_NO" />
+		<result property="modifyDate" column="MODIFY_DATE" />
+		<result property="modifyPoint" column="MODIFY_POINT" />
+		<result property="memberNo" column="MEMBER_NO" />
+	</resultMap>
+	
+	<select id="selectGoods" resultMap="goodsDTO" parameterType="_int">
+        SELECT
+               A.GOODS_NO
+             , A.GOODS_NAME
+             , A.GOODS_PRICE
+             , A.GOODS_TYPE_NO
+             , A.GOODS_WRITER_MEMBER_NO
+             , A.GOODS_STATUS
+             , A.CREATED_DATE
+             , A.MODIFIED_DATE
+             , C.GOODS_TYPE_NAME  
+             , B.ATTACHMENT_NO
+             , B.ORIGINAL_NAME
+             , B.SAVED_NAME
+             , B.SAVE_PATH
+             , B.FILE_TYPE
+             , B.THUMBNAIL_PATH
+          FROM MG_GOODS A
+          JOIN MG_GOODS_TYPE C ON (A.GOODS_TYPE_NO = C.GOODS_TYPE_NO)
+          LEFT JOIN MG_GOODS_ATTACHMENT B ON (A.GOODS_NO = B.REF_GOODS_NO)
+         WHERE A.GOODS_STATUS = 'Y'
+           AND A.GOODS_NO = #{ no }           
+	</select>
+	
+	<insert id="insertOrder" parameterType="orderDTO">
+        INSERT
+          INTO MG_ORDER A
+        (
+          A.ORDER_NO, A.ORDER_MEMBER_NO, A.ORDER_TITLE, A.AMOUNT_PRICE
+        )
+        VALUES
+        (
+          SEQ_ORDER_NO.NEXTVAL, #{ memberNo }, #{ orderTitle }, #{ amountPrice }
+        )
+	</insert>
+	
+	<insert id="insertOrderGoods" parameterType="orderGoodsDTO">
+		<selectKey keyProperty="orderNo" order="BEFORE" resultType="_int">
+            SELECT
+                   SEQ_ORDER_NO.CURRVAL
+              FROM DUAL    
+		</selectKey>
+        INSERT
+          INTO MG_ORDER_GOODS A
+        (
+          A.ORDER_NO, A.GOODS_NO, A.AMOUNT_COUNT, A.ORDER_GOODS_PRICE
+        )
+        VALUES
+        (
+          #{ orderNo }, #{ goodsNo }, #{ amountCount }, #{ goodsPrice }
+        )
+	</insert>
+	
+	<insert id="insertOrderDelivery" parameterType="orderDeliveryDTO">
+		<selectKey keyProperty="orderNo" order="BEFORE" resultType="_int">
+            SELECT
+                   SEQ_ORDER_NO.CURRVAL
+              FROM DUAL    
+		</selectKey>
+        INSERT
+          INTO MG_ORDER_DELIVERY A
+        (
+          A.DELIVERY_NO, A.ORDER_NO
+        )
+        VALUES
+        (
+          SEQ_ORDER_DELI_NO.NEXTVAL, #{ orderNo }
+        )
+	</insert>
+	
+	<insert id="insertOrderAddress" parameterType="orderAddressDTO">
+		<selectKey keyProperty="orderDeliNo" order="BEFORE" resultType="_int">
+            SELECT
+                   SEQ_ORDER_DELI_NO.CURRVAL
+              FROM DUAL    
+		</selectKey>
+        INSERT
+          INTO MG_ORDER_ADDRESS A
+        (
+          A.ORDER_ADD_NO, A.DELIVERY_NO, A.ORDER_ADD_TYPE, A.RECIEVER_NAME, A.RECIEVER_PHONE, A.RECIEVER_ADDRESS, A.MEMBER_NO
+        )
+        VALUES
+        (
+          SEQ_ORDER_ADD_NO.NEXTVAL, #{ orderDeliNo }, #{ addType }, #{ recieverName }, #{ recieverPhone }, #{ recieverAdd }, #{ memberNo }
+        )
+	</insert>
+	
+	<insert id="insertOrderPayment" parameterType="paymentDTO">
+		<selectKey keyProperty="orderNo" order="BEFORE" resultType="_int">
+            SELECT
+                   SEQ_ORDER_NO.CURRVAL
+              FROM DUAL    
+		</selectKey>
+        INSERT
+          INTO MG_PAYMENT A
+        (
+          A.PAYMENT_NO, A.PAYMENT_ORDER_NO, A.PAYMENT_MEMBER_NO, A.FINAL_PAYMENT_PRICE, A.USED_POINT
+        )
+        VALUES
+        (
+          SEQ_PAYMENT_NO.NEXTVAL, #{ orderNo }, #{ memberNo }, #{ finalPrice }, #{ usedPoint }
+        )
+	</insert>
+	
+	<insert id="insertOrderPaymentDivision" parameterType="paymentDivisionDTO">
+		<selectKey keyProperty="paymentNo" order="BEFORE" resultType="_int">
+            SELECT
+                   SEQ_PAYMENT_NO.CURRVAL
+              FROM DUAL    
+		</selectKey>
+        INSERT
+          INTO MG_PAYMENT_DIVISION A
+        (
+          A.DIVISION_NO, A.DIVISION_PAYMENT_NO, A.ADMISSION_PAYMENT_NUM
+        )
+        VALUES
+        (
+          SEQ_DIVISION_NO.NEXTVAL, #{ paymentNo }, #{ admissionPayNo }
+        )
+	</insert>
+	
+	<insert id="insertMemberPoint" parameterType="memberPointDTO">
+		<selectKey keyProperty="paymentNo" order="BEFORE" resultType="_int">
+            SELECT
+                   SEQ_PAYMENT_NO.CURRVAL
+              FROM DUAL    
+		</selectKey>
+        INSERT
+          INTO MG_MEMBER_POINT A
+        (
+          A.POINT_NO, A.CHANGED_POINT_TYPE, A.PAYMENT_NO, A.MODIFY_POINT, A.MEMBER_NO
+        )
+        VALUES
+        (
+          SEQ_MEM_POINT_NO.NEXTVAL, #{ changedType }, #{ paymentNo }, #{ modifyPoint }, #{ memberNo }
+        )
+	</insert>
+	
+	<update id="updateMemberColumn" parameterType="memberPointDTO">
+        UPDATE
+               MG_MEMBER M
+           SET M.MEMBER_POINT = #{ modifyPoint }
+             , M.MODIFIED_DATE = #{ modifyDate } 
+         WHERE M.MEMBER_NO = #{ memberNo }
+	</update>
+	
+	<insert id="insertMemberModify" parameterType="memberPointDTO">
+        INSERT
+          INTO MG_MEMBER_MODIFY A
+        (
+          A.MODIFY_NO, A.ORIGIN_COLUMN, A.ORIGIN_INFO, A.MODIFY_INFO, A.MEMBER_NO
+        )
+        VALUES
+        (
+          SEQ_MEM_MODIFY_NO.NEXTVAL, #{ columnName }, #{ existingPoint }, #{ modifyPoint }, #{ memberNo }
+        )
+	</insert>
+	
+</mapper>

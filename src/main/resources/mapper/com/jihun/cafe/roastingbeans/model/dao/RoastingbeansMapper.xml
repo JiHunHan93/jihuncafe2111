@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC ".//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jihun.cafe.roastingbeans.model.dao.RoastingbeansMapper">
+
+	<resultMap type="com.jihun.cafe.goods.model.dto.MgGoodsDTO" id="goodsDTO">
+		<id property="no" column="GOODS_NO" />
+		<result property="name" column="GOODS_NAME" />
+		<result property="price" column="GOODS_PRICE" />
+		<result property="typeNo" column="GOODS_TYPE_NO" />
+		<result property="writerMemberNo" column="GOODS_WRITER_MEMBER_NO" />
+		<result property="status" column="GOODS_STATUS" />
+		<result property="createdDate" column="CREATED_DATE" />
+		<result property="modifiedDate" column="MODIFIED_DATE" />
+		<result property="typeName" column="GOODS_TYPE_NAME" />
+		<result property="attachNo" column="ATTACHMENT_NO" />
+		<result property="originName" column="ORIGINAL_NAME" />
+		<result property="savedName" column="SAVED_NAME" />
+		<result property="savedPath" column="SAVE_PATH" />
+		<result property="fileType" column="FILE_TYPE" />
+		<result property="thumbPath" column="THUMBNAIL_PATH" />
+	</resultMap>
+	
+	<select id="selectGoods" resultMap="goodsDTO" parameterType="_int">
+        SELECT
+               A.GOODS_NO
+             , A.GOODS_NAME
+             , A.GOODS_PRICE
+             , A.GOODS_TYPE_NO
+             , A.GOODS_WRITER_MEMBER_NO
+             , A.GOODS_STATUS
+             , A.CREATED_DATE
+             , A.MODIFIED_DATE
+             , C.GOODS_TYPE_NAME  
+             , B.ATTACHMENT_NO
+             , B.ORIGINAL_NAME
+             , B.SAVED_NAME
+             , B.SAVE_PATH
+             , B.FILE_TYPE
+             , B.THUMBNAIL_PATH
+          FROM MG_GOODS A
+          JOIN MG_GOODS_TYPE C ON (A.GOODS_TYPE_NO = C.GOODS_TYPE_NO)
+          LEFT JOIN MG_GOODS_ATTACHMENT B ON (A.GOODS_NO = B.REF_GOODS_NO)
+         WHERE A.GOODS_STATUS = 'Y'
+           AND A.GOODS_NO = #{ no }           
+	</select>
+	
+</mapper>

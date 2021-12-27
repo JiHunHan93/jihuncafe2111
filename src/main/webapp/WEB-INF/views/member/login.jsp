@@ -28,16 +28,16 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="/mg/resources/js/event.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="/mg/resources/css/login.css">
+	href="/cafe/resources/css/login.css">
 <link rel="stylesheet" type="text/css"
-	href="/mg/resources/css/header.css">
+	href="/cafe/resources/css/header.css">
 <link rel="stylesheet" type="text/css"
-	href="/mg/resources/css/footer.css">
+	href="/cafe/resources/css/footer.css">
 <link rel="stylesheet" type="text/css"
-	href="/mg/resources/css/main-common.css">
+	href="/cafe/resources/css/main-common.css">
 </head>
 <body>
-	<%-- <jsp:include page="../common/header.jsp" /> --%>
+	<jsp:include page="../common/header.jsp" />
 
 	<div class="container">
 		<br>
@@ -92,6 +92,6 @@
 
 	</div>
 
-	<%-- <jsp:include page="../common/footer.jsp" /> --%>
+	<jsp:include page="../common/footer.jsp" />
 </body>
 </html>

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* 사이드바 래퍼 스타일 */
+
+#page-wrapper {
+    margin: 0 auto;
+    width: 1100px;
+    height: auto;
+    }
+    /*사이드바 기본 세팅*/
+    #sidebar-wrapper {
+    position: fixed;
+    width: 170px;
+    height: auto;
+    background: transparent;
+    border-radius: 10px;
+    margin: 0 0 0 -200px;
+    border: 1px solid rgb(220 224 225);
+    }
+    
+    #main-wrapper{
+    width: 1100px;
+    margin: 50px auto;
+    }
+    /*wrapper*/
+    #page-content-wrapper {
+      
+    width: 100%;
+    padding: 20px;
+    }
+    /* 사이드바 마우스 올렸을때 스타일 */
+    .sidebar-nav :hover{
+        background: rgb(192, 227, 248);
+    }
+    .sidebar-nav {
+    width: 170px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+    
+    .sidebar-nav li {
+      
+    text-indent: 1.5em;
+    line-height: 2.8em;
+    border-bottom: 0.5px solid rgb(220 224 225);
+    }
+    
+    .sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    height: 65px;
+    line-height: 60px;
+    color: black;
+    font-size: 17px;
+    }
+    /*사이드바 제목(상단)기본 색*/
+    .sidebar-brand{
+    background: rgb(86 205 255);
+    width: 168px;
+    border-radius: 8px 8px 0 0;
+    height: auto;
+    font-family: 'Wemakeprice-Bold';
+}
+    }
+    .wishList-List{
+      width: 80%;
+      height: auto;
+    }

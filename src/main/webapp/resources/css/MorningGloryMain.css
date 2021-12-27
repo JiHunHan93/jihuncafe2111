@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+/* BASIC css start */
+
+.contentWrapper{}
+.new_menu { display:block; width:1100px; margin:70px auto; text-align:center; }
+.new_menu h3 { font-size:36px; font-weight:100; color:#000; border-bottom:3px solid skyblue; text-align:center; margin:0 auto; }
+.new_menu h3.w360 { width:360px; }
+.new_menu h3.w210 { width:360px; margin-top:30px; }
+.new_menu h3.w330 { width:330px; margin-top:30px; }
+.new_menu h3.w355 { width:355px; margin-top:30px; }
+.new_menu input[type="radio"] { display: none; }
+.new_menu label { display: inline; font-size:17px; font-weight:300; color:#999; cursor:pointer; }
+.new_menu label:nth-of-type(2) {  }
+.new_menu div { }
+.new_menu input[type="radio"]:checked + label { display: inline; font-size:36px; font-weight:100; color:#000; border-bottom:3px solid skyblue; }
+.new_menu input[type="radio"]:checked + label strong { font-weight:700; }
+.new_menu #mntab1:checked ~ #mntabcon1, div.new_menu #mntab2:checked ~ #mntabcon2, div.new_menu #mntab3:checked ~ #mntabcon3 { display: block; margin-top:10px; }
+
+
+.new_menu ul { display:inline-block; width: 1040px; margin:40px 30px 0; }
+.new_menu ul li { width:24.2%; float:left; margin-bottom:30px; transition: background-color 250ms ease-out; outline:1px solid #eee; margin-right:1%; }
+.new_menu ul li.last { margin-right:0; }
+.new_menu ul li:hover { background:#f9f9f9; }
+.new_menu ul li a { display:block; margin:13px; text-align:center; }
+.new_menu ul li a img { width:100%; margin-bottom:15px; }
+.new_menu ul li a p.s_price { font-size:19px; color:#000; font-weight:500; letter-spacing:-0.5px; padding-bottom:15px; border-bottom:1px solid #ddd; }
+.new_menu ul li a span.s_price_consume { font-size:14px; color:#999; font-weight:300px; text-decoration:line-through; }
+.new_menu ul li a span.s_discount_percent{ font-size:14px; color:skyblue; font-weight:300; padding:0 5px; }
+.new_menu ul li a p.s_name { font-size:14px; font-weight:500; color:#000; margin: 15px 0; line-height:140%; letter-spacing:-1px; }
+.new_menu ul li a p.s_subname { font-size:12px; color:#999; line-height:150%;  height : 38px; word-wrap:break-word; display:block; display:-webkit-box; -webkit-line-clamp:2;  -webkit-box-orient:vertical;  overflow:hidden; text-overflow:ellipsis; }
+.new_menu ul li a p.s_review_count { display:inline-block; font-size:11px; border:1px solid #ddd; padding:2px 5px; color:#000; margin:14px 0 5px; }
+.new_menu ul li a p.s_review_count strong { color:skyblue; font-weight:700; }
+.new_menu ul:after { content: ''; display: block; clear: both; }
+
+
+.new_menu .ul5 { display:inline-block; width: 1040px; margin:40px 30px 0; }
+.new_menu .ul5 li { width:19.2%; float:left; margin-bottom:30px; transition: background-color 250ms ease-out; outline:1px solid #eee; margin-right:1%; height:380px; }
+.new_menu .ul5 li a { display:block; margin:5px; text-align:center; }
+.new_menu .ul5 li a p.s_review_count5 { display:inline-block; font-size:11px; border:1px solid #ddd; padding:2px 5px; color:#000; margin-bottom:5px; }
+.new_menu .ul5 li a p.s_review_count5 strong { color:skyblue; font-weight:700; }
+.new_menu .ul5 li a p.s_name { font-size:14px; font-weight:500; color:#000; margin: 15px 0; line-height:140%; letter-spacing:-.5px;  height : 38px; word-wrap:break-word; display:block; display:-webkit-box; -webkit-line-clamp:2;  -webkit-box-orient:vertical;  overflow:hidden; text-overflow:ellipsis; }
+.new_menu .ul5 li a p.s_box { background:skyblue; color:#fd3; font-size:15px; font-weight:700; padding:7px; margin-bottom:15px; }
+.new_menu .ul5 li a img { width:100%; margin-bottom:0;  }
+
+
+
+
+/* 메인 3단 배너 */
+.bestthree_area { display:block; width:auto; margin:0 auto; background:url('http://cdn010.negagea.net/slimcook/slim/slimcook/img1911/bestthree_area_bg.jpg');background-size:cover; padding:50px 0 60px;  }
+.bestthree_area div.box { display:block; width:1100px; margin:0 auto;  }
+.bestthree_area div.box p { display:inline-block; width:100%; font-size:17px; font-weight:700; color:#000; text-align:center; margin:0 0 40px; letter-spacing:-1px; }
+.bestthree_area div.box p strong { font-size:26px; padding-left:7px; }
+.bestthree_area div.box ul { display:block; width: 1076px; background:#FFF; padding:12px 12px 0 12px; margin:0 auto; height:280px;}
+.bestthree_area div.box ul li { float:left; width:33.3333334%; height:100%; }
+.bestthree_area div.box ul li a { display:inline-block; margin:12px; text-align:center; height:90%; }
+.bestthree_area div.box ul li a img { width:100%; height:220px; margin-bottom:15px; }
+.bestthree_area div.box ul li a dl { display:inline-block; background:#FFF; position:relative; top:-48px; padding:10px; width:230px; text-align:center; }
+.bestthree_area div.box ul li a dl dt { font-size:18px; font-weight:700; color:#000; }
+.bestthree_area div.box ul li a dl dd { font-size:15px; color:#999; line-height:220%; }
+.bestthree_area div.box ul:after { content: ''; display: block; clear: both; }
+
+
+
+/* 추천 메뉴*/
+.recmd_menu { display:block; width:1100px; margin:100px auto 70px; }
+.recmd_menu h2 { font-size:36px; font-weight:100; color:#000; text-align:center; }
+.recmd_menu h2 strong { font-weight:700; }
+
+.recmd_menu ul { display:block; width: 1040px; margin:40px auto 0; }
+.recmd_menu ul li { width:25%; float:left; margin-bottom:30px; background:url('http://cdn010.negagea.net/slimcook/slim/slimcook/img1911/addtext_a.png') no-repeat 0 15px; padding-top:20px; transition: background-color 250ms ease-out; }
+.recmd_menu ul li:hover { background:#f9f9f9 url('http://cdn010.negagea.net/slimcook/slim/slimcook/img1911/addtext_ahover.png') no-repeat 0 15px; }
+.recmd_menu ul li a { display:block; margin:8px; text-align:center; }
+.recmd_menu ul li a div { border: 1px solid #eee; padding: 10px; }
+.recmd_menu ul li a img { width:100%; margin-bottom:15px; }
+.recmd_menu ul li a p.s_price { font-size:19px; color:#000; font-weight:500; letter-spacing:-0.5px; padding-bottom:15px; border-bottom:1px solid #ddd; }
+.recmd_menu ul li a span.s_price_consume { font-size:14px; color:#999; font-weight:300px; text-decoration:line-through; }
+.recmd_menu ul li a span.s_discount_percent{ font-size:14px; color:skyblue; font-weight:300; padding:0 5px; }
+.recmd_menu ul li a p.s_name { font-size:14px; font-weight:500; color:#000; margin: 15px 0; line-height:140%; letter-spacing:-0.5px; }
+.recmd_menu ul li a p.s_subname { font-size:12px; color:#999; line-height:150%;  height : 38px; word-wrap:break-word; display:block; display:-webkit-box; -webkit-line-clamp:2;  -webkit-box-orient:vertical;  overflow:hidden; text-overflow:ellipsis;  }
+.recmd_menu ul li a p.s_review_count { display:inline-block; font-size:11px; border:1px solid #ddd; padding:2px 5px; color:#000; margin-top:14px; }
+.recmd_menu ul li a p.s_review_count strong { color:skyblue; font-weight:700; }
+.recmd_menu ul li a p.s_addtext { font-size:13px; color:#999; margin:30px 0;}
+.recmd_menu ul:after { content: ''; display: block; clear: both; }
+
+
+
+/*  이벤트 3단 배너 */
+.event_area { display:block; width:1100px; margin:70px auto; }
+.event_area h2 { font-size:36px; font-weight:100; color:#000; text-align:center; }
+.event_area h2 strong { font-weight:700; }
+.event_area ul { display:block; width: 1040px; margin:30px auto; }
+.event_area ul li { float:left; width:33.3333334%; }
+.event_area ul li a { display:inline-block; margin-left:10px;  }
+.event_area ul li a.first { margin-left:0; }
+.event_area ul li a img { width:100%; height:220px; }
+.event_area ul:after { content: ''; display: block; clear: both; }
+
+
+
+/*  탭메뉴*/
+.maintab_menu { display:none; width:1040px; margin:100px auto 0; }
+.maintab_menu h2 { font-size:36px; font-weight:100; color:#000; text-align:center; }
+.maintab_menu h2 strong { font-weight:700; }
+
+.maintab_menu_tab { display:inline-block; width:1040px; margin:30px auto; }
+.maintab_menu_tab input[type="radio"] { display: none; }
+.maintab_menu_tab label { display: inline-block;  width: 14.18%; text-align: center; color: #999; font-size: 14px; line-height: 2.2; border:1px solid #eee; float:left; margin-bottom:15px; padding:13px 0; cursor:pointer; margin-left:-1px; }
+.maintab_menu_tab label:nth-of-type(2) { width: 14.18%; }
+.maintab_menu_tab > div { display: none; background:#FFF; }
+.maintab_menu_tab input[type="radio"]:checked + label { outline:2px solid skyblue; color:#000; }
+.maintab_menu_tab #mttab1:checked ~ #tabcont1, .maintab_menu_tab #mttab2:checked ~ #tabcont2, .maintab_menu_tab #mttab3:checked ~ #tabcont3, .maintab_menu_tab #mttab4:checked ~ #tabcont4, .maintab_menu_tab #mttab5:checked ~ #tabcont5, .maintab_menu_tab #mttab6:checked ~ #tabcont6, .maintab_menu_tab #mttab7:checked ~ #tabcont7 { display: block; }
+
+.maintab_menu_tab label i { display:block; background:#FFF url('http://cdn010.negagea.net/slimcook/slim/slimcook/img1911/icon_main_tab.png')no-repeat; width:60px; height:45px; margin:0 auto;  }
+.maintab_menu_tab label i.maintab_menu_tab1 { background-position:0 0; }
+.maintab_menu_tab label i.maintab_menu_tab2 { background-position:-60px 0;}
+.maintab_menu_tab label i.maintab_menu_tab3 { background-position:-120px 0;}
+.maintab_menu_tab label i.maintab_menu_tab4 { background-position:-180px 0;}
+.maintab_menu_tab label i.maintab_menu_tab5 { background-position:-240px 0;}
+.maintab_menu_tab label i.maintab_menu_tab6 { background-position:-300px 0;}
+.maintab_menu_tab label i.maintab_menu_tab7 { background-position:-360px 0;}
+
+
+/*4단*/
+.maintab_menu ul.tab_product { display:inline-block; width: 1040px; margin:0 auto; }
+.maintab_menu ul.tab_product li { width:25%; float:left; margin-bottom:30px; transition: background-color 250ms ease-out;}
+.maintab_menu ul.tab_product li:hover { background:#f9f9f9; }
+.maintab_menu ul.tab_product li a { display:block; margin:13px; text-align:center; }
+.maintab_menu ul.tab_product li a img { width:100%; margin-bottom:15px; }
+.maintab_menu ul.tab_product li a p.s_price { font-size:19px; color:#000; font-weight:400; letter-spacing:-0.5px; padding-bottom:15px; border-bottom:1px solid #ddd; }
+.maintab_menu ul.tab_product li a span.s_price_consume { font-size:14px; color:#999; font-weight:300px; text-decoration:line-through; }
+.maintab_menu ul.tab_product li a span.s_discount_percent{ font-size:14px; color:skyblue; font-weight:300; padding:0 5px; }
+.maintab_menu ul.tab_product li a p.s_name { font-size:14px; font-weight:500; color:#000; margin: 15px 0; line-height:140%; letter-spacing:-0.5px; }
+.maintab_menu ul.tab_product li a p.s_subname { font-size:12px; color:#999; line-height:150%; font-weight:300; }
+.maintab_menu ul.tab_product li a p.s_review_count { display:inline-block; font-size:11px; border:1px solid #ddd; padding:2px 5px; color:#000; margin-top:14px; }
+.maintab_menu ul.tab_product li a p.s_review_count strong { color:skyblue; font-weight:700; }
+.maintab_menu ul.tab_product:after { content: ''; display: block; clear: both; }
+
+
+
+
+
+
+/*  사이트 리뷰 */
+.sitebestreview_area{ display:block; width:auto; margin:20px auto; background:#f5f5f5; padding:50px 0 60px;  }
+.sitebestreview_area div.box { display:block; width:1100px; margin:0 auto;  }
+.sitebestreview_area div.box h2 { display:inline-block; width:100%; font-size:26px; font-weight:700; color:#000; text-align:center; margin:0 0 40px; letter-spacing:-1px; }
+.sitebestreview_area div.box ul { display:block; width: 1076px; background:#FFF; padding:12px; margin:0 auto; }
+.sitebestreview_area div.box ul li { float:left; width:20%; transition: background-color 250ms ease-out; }
+.sitebestreview_area div.box ul li a { display:inline-block; margin:12px; text-align:center; }
+.sitebestreview_area div.box ul li a img { width:100%; margin-bottom:15px; }
+.sitebestreview_area div.box ul li a p.s_sub { font-size:14px; color:#000; line-height:150%; font-weight:500; }
+.sitebestreview_area div.box ul li a p.s_review { font-size:14px; font-weight:300; color:#666; line-height:150%;  height : 63px; word-wrap:break-word; display:block; display:-webkit-box; -webkit-line-clamp:3;  -webkit-box-orient:vertical;  overflow:hidden; text-overflow:ellipsis; }
+.sitebestreview_area div.box ul li a p.s_review_star { display:block; margin:7px auto; background:url('http://cdn010.negagea.net/slimcook/slim/slimcook/img1911/icon_star.png'); width:65px; height:12px; background-size:13px 12px;  }
+.sitebestreview_area div.box ul li:hover { background:#f5f5f5; }
+.sitebestreview_area div.box ul:after { content: ''; display: block; clear: both; }
+
+.sitebestreviewimg_area { display:block; width:1050px; margin:0 auto; padding:0 25px 25px; background:#FFF;  }
+.sitebestreviewimg_area a { vertical-align: top; }
+.sitebestreviewimg_area a img { width:100%; max-height:80px; }
+
+
+
+
+
+.blogbestreview_area {position:relative; z-index:1; width:1100px;  margin: 70px auto 0;  }
+.blogbestreview_area h2 { display:block; width:100%; font-size:26px; font-weight:700; color:#000; text-align:center; margin:0 0 40px; letter-spacing:-1px; }
+.blogbestreview_area h2:after {content:''; display:block; clear:both;}
+.device { margin-top: 15px; }
+.swiper-container {width:1040px; height:360px;  margin:0 30px; position:relative; overflow:hidden; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; -ms-backface-visibility:hidden; -o-backface-visibility:hidden;backface-visibility:hidden;z-index:1;}
+.pagination {z-index:2; position:absolute; left:120px; top:35px; display:none;}
+.swiper-slide {width:auto; float:left; }
+.swiper-slide ul {display:block; width:100%; font-size:0; line-height:0;}
+.swiper-slide ul:after {content: ""; display: block; clear: both;}
+.swiper-slide ul li {float:left; width:33.3333334%; margin-bottom:10px; }
+.swiper-slide ul li.first {margin:0;}
+.swiper-slide ul li a {display:inline-block; margin-left:10px; border:2px solid #ffd038; padding:12px; margin:0 10px; transition: border-color 250ms ease-out;} 
+.swiper-slide ul li a:hover { border:2px solid skyblue; }
+.swiper-slide ul li a.first { margin-left:0; }
+.swiper-slide ul li a img { width:50%; height:135px; display:inline-block; }
+.swiper-slide ul li a dl { width:47%; display:inline-block; float:right; }
+.swiper-slide ul li a dl dt { width:100%; }
+.swiper-slide ul li a dl dt span.b_review_star  { display:inline-block; width:90px; height:17px; background:url('http://cdn010.negagea.net/slimcook/slim/slimcook/img1911/icon_star.png'); }
+.swiper-slide ul li a dl dt span.b_review_heart { display:inline-block; width:18px; height:17px; background:url('http://cdn010.negagea.net/slimcook/slim/slimcook/img1911/icon_heart.png'); float:right; }
+.swiper-slide ul li a dl dd { font-size:13.5px; color:#666; font-weight:300; line-height:140%; margin-top:4px; padding-top:3px; border-top:1px solid #eee; text-align:justify; }
+.swiper-slide ul li a dl dd p { font-weight:500; color:#000; margin-bottom:2px;}
+.swiper-pagination-switch {background:#65803e;margin:0px 3px;border-radius:8px; width:8px; height:8px;display: inline-block;cursor: pointer;}
+.swiper-active-switch {background:#FF0;}
+.swiper-wrapper {position:relative;width:100%;-webkit-transition-property:-webkit-transform,left,top;-webkit-transition-duration:0s;-webkit-transform:translate3d(0px,0,0);-webkit-transition-timing-function:ease;-moz-transition-property:-moz-transform,left,top;-moz-transition-duration:0s;-moz-transform:translate3d(0px,0,0);-moz-transition-timing-function:ease;-o-transition-property:-o-transform,left,top;-o-transition-duration:0s;-o-transform:translate3d(0px,0,0);-o-transition-timing-function:ease;-o-transform:translate(0px,0px);-ms-transition-property:-ms-transform,left,top;-ms-transition-duration:0s;-ms-transform:translate3d(0px,0,0);-ms-transition-timing-function:ease;transition-property:transform,left,top;transition-duration:0s;transform:translate3d(0px,0,0);transition-timing-function:ease;}
+.swiper-free-mode > .swiper-wrapper {-webkit-transition-timing-function:ease-out;-moz-transition-timing-function:ease-out;-ms-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto;}
+.device .arrow-left {z-index:2; background:transparent url(http://cdn010.negagea.net/slimcook/slim/dailymeal/img201511/main_visual_control_btn.png) no-repeat 0 -70px; position:absolute; left:0; top:50%; margin-top:-35px; width:70px; height:70px; border-radius:4px;}
+.device .arrow-right {z-index:2; background:transparent  url(http://cdn010.negagea.net/slimcook/slim/dailymeal/img201511/main_visual_control_btn.png) no-repeat -70px -70px; position:absolute; right:0; top:50%; margin-top:-35px; width:70px; height:70px; border-radius:4px;}
+.device .arrow-left:hover {background-position:0 -70px;}
+.device .arrow-right:hover {background-position:-70px -70px;}
+.mt50 { margin-top:50px; }
+
+
+.clobox { display:block; width:1040px; margin:70px 30px 0; }
+.item_best1 { display:block; width: 100%;  margin-bottom:40px; }
+.item_best1 p { float:left; display:inline-block;  }
+.item_best1 p:nth-of-type(1){ width:700px;background:#f5f5f5; }
+.item_best1 p:nth-of-type(1) img { width:100%; height:287px; }
+.item_best1 p:nth-of-type(2){ width:310px; margin-left:30px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; padding:25px 0; }
+.item_best1 p span { display: block; line-height:1; }
+.item_best1 p span:nth-of-type(1) { font-size:24px; font-weight:500; color:#333; text-align:left; letter-spacing:-.5px; }
+.item_best1 p span:nth-of-type(2) { margin: 20px 0 30px; font-size: 16px; line-height: 1.4; color: #999; text-align: justify; }
+.item_best1 p span:nth-of-type(3) { font-size:18px; text-align:right; text-decoration: line-through; color:#ccc; }
+.item_best1 p span:nth-of-type(4) { font-size:42px; color:#063; font-weight:100; display:inline-block; width: 24%; letter-spacing: -1.5px;}
+.item_best1 p span:nth-of-type(4) i { font-size:18px; font-style: normal; }
+.item_best1 p span:nth-of-type(5) { display: inline-block; text-align: right; width: 74%; font-size: 42px; font-weight: 900; letter-spacing: -2px; color:#333; }
+.item_best1 p span:nth-of-type(5) i { font-size:18px; font-style: normal; font-weight:400; }
+.item_best1 p span:nth-of-type(6) {  background: #ddd;  text-align: center; font-size: 14px; letter-spacing: 3px; margin-top: 23px; padding: 10px; border-radius: 30px; color: #333; transition: color 250ms ease-out; transition: background 250ms ease-out; }
+.item_best1 p span:nth-of-type(6):hover { background: #87ceeb; color:#fff; }
+.clobox:after { content: ""; display: table; clear: both; }
+.clobox h3 {  line-height: 2;  margin: 0 0 20px 0; letter-spacing: -1px; text-align: center; display: inline-block; width: 100%; border:none; }
+.clobox h3 span { font-size:26px; }
+/* BASIC css end */
+
+/* BASIC css start */
+#todayWrap {text-align:center; width:100px; margin-top:20px; }
+
+#todayWrap div.vhd {border:1px #EEE solid; background-color:#FFF; text-align: center; }
+#todayWrap div.vhd a {display:block; background-color: transparent;padding:7px 0 10px 0; border-bottom:1px solid #eee; font-size: 9pt; line-height: 1; transition: background-color, color 250ms ease-out;}
+#todayWrap div.vhd a:hover {color:#000; }
+#todayWrap div.vhd a.first { background:#093; color:#fff; outline:1px solid #093; margin-top:1px; border:0; }
+
+#todayWrap div.ft {}
+#todayWrap div.ft a {display:block; padding:5px;}
+#todayWrap div.ft a span {display:block; border: 1px solid #DDD; background:transparent url('http://cdn010.negagea.net/slimcook/slim/slimcook/img20180622/quick_top.png') no-repeat; width:50px; height:50px; margin:0 auto; text-indent:-9999em;}
+
+#todayWrap ul.cont {border:0solid #DDD; padding:10px 0; margin:5px 0;}
+#todayWrap ul.cont li a { display: inline-block; }
+#todayWrap ul.cont li img { width: 98px; height: 98px; border: 1px solid #DDD; border-radius:50%; overflow:hidden; box-shadow: 0 1px 2px rgba(0,0,0,.03);}
+#todayWrap ul.cont li { padding-bottom:10px; }
+
+div#todayWrap div.qwrap {position:relative; z-index:450; padding-top:0;}
+div#todayWrap div.qwrap.flow {position:fixed; top: 70px; left: 50%; margin-left: 560px; width:100px;}
+/* BASIC css end */

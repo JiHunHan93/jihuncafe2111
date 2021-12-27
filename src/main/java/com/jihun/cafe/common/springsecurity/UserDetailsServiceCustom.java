@@ -41,6 +41,8 @@ public class UserDetailsServiceCustom implements UserDetailsService {
 			/* 사용자 정보 있을 경우 로직 전개 (userDetails에 데이터 넣기) */
 			userDetails.setusername(userInfo.getId());
 			userDetails.setPassword(userInfo.getPwd());
+			userDetails.setMembername(userInfo.getName());
+			userDetails.SetMemberNo(userInfo.getNo());
 			
 			/* 사용자 권한 select해서 받아온 List<String> 객체 주입 */
 			/* mapper.xml에서 해당 쿼리를 만들지 않았기 때문에 오류남 */

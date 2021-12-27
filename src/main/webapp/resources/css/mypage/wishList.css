@@ -1,0 +1,60 @@
+
+
+  .fakeimg1 {
+    height: 200px;
+    background:rgb(214, 211, 211);
+    width: 300px;
+  }
+ 
+.h{
+  font-size: 18px;
+  text-align: center;
+}
+
+.chk1{
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  vertical-align: middle;
+  
+  
+}
+.abc{
+	border:none;
+}
+.del{
+background: rgb(185 228 245);
+    color: rgb(3, 3, 3) !important;
+    margin-left: 46%;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    width: 80px;
+}
+/* *****************************************************************************   */
+/*바디*/
+.body-size{
+ width:70%;
+ height: auto;
+ float: left;
+ margin-left: 16%;
+}
+/*헤더*/
+.header_area{
+  width: auto;
+  height: 250px;
+  
+  background: lightgray;
+  text-align: center;
+  
+}
+/*푸터*/
+.footer_area{
+  width: auto;
+  height: 150px;
+  
+
+  
+  background: lightgray;
+  text-align: center;
+}

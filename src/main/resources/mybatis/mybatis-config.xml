@@ -5,5 +5,14 @@
  <configuration>
  	<typeAliases>
  		<typeAlias alias="MemberDTO" type="com.jihun.cafe.member.model.dto.MemberDTO"/>
+ 		<typeAlias alias="MgGoodsDTO" type="com.jihun.cafe.goods.model.dto.MgGoodsDTO"/>
+ 		<typeAlias alias="OrderDTO" type="com.jihun.cafe.order.model.dto.OrderDTO"/>
+ 		<typeAlias alias="OrderGoodsDTO" type="com.jihun.cafe.order.model.dto.OrderGoodsDTO"/>
+ 		<typeAlias alias="OrderDeliveryDTO" type="com.jihun.cafe.order.model.dto.OrderDeliveryDTO"/>
+ 		<typeAlias alias="OrderAddressDTO" type="com.jihun.cafe.order.model.dto.OrderAddressDTO"/>
+ 		<typeAlias alias="PaymentDTO" type="com.jihun.cafe.payment.model.dto.PaymentDTO"/>
+ 		<typeAlias alias="PaymentDivisionDTO" type="com.jihun.cafe.payment.model.dto.PaymentDivisionDTO"/>
+ 		<typeAlias alias="MemberPointDTO" type="com.jihun.cafe.member.model.dto.MemberPointDTO"/>
+ 		<typeAlias alias="RoastingbeansMapper" type="com.jihun.cafe.roastingbeans.model.dao.RoastingbeansMapper"/>
  	</typeAliases>
  </configuration>

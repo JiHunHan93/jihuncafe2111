@@ -1,0 +1,167 @@
+.frm li {
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+    padding-left: 95px;
+    color: #777;
+    font-size: 14px;
+    line-height: 37px;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.fakeimg {
+    height: 200px;
+    background: white;
+  }
+  .fakeimg1 {
+    height: 200px;
+    background:rgb(214, 211, 211);
+    width: 300px;
+  }
+ 
+.h{
+  font-size: 18px;
+  text-align: center;
+}
+.bar{
+  border: 5px solid #EEE;
+  height: 75px;
+  text-align: left;
+  line-height: 20px;
+  padding: 20px
+}
+.chk1{
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.del{
+  background: #093;
+  color: #FFF !important;
+  border: 1px #093 solid !important;
+}
+.frm{
+  margin-left: 194px;
+}
+.frm1{
+  margin-left: 212px;
+}
+.btns{
+  
+  margin-top: 40px;
+  text-align: center;
+  
+  line-height: 0;
+}
+.btn_color_point {
+  background: #093;
+  color: #FFF !important;
+  border: 1px #093 solid !important;
+}
+.btn_default {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  padding: 7px 10px;
+  margin-left: 1px;
+  font-size: 11pt;
+  line-height: 1;
+  font-weight: 400;
+  -o-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  transition: all 250ms ease-out;
+}
+.btn_color {
+  background: #FFF;
+  color: #555 !important;
+  border: 1px #DDD solid !important;
+}
+/********/
+
+.img_area{
+  margin-left: 20%;
+}
+
+/*헤더*/
+.header_area{
+  width: auto;
+  height: 250px;
+  
+  background: lightgray;
+  text-align: center;
+  
+}
+/*푸터*/
+.footer_area{
+  width: auto;
+  height: 150px;
+  
+
+  
+  background: lightgray;
+  text-align: center;
+}
+
+
+/* 사이드바 래퍼 스타일 */
+
+#page-wrapper {
+  padding-left: 30%;
+  }
+  /*사이드바 기본 세팅*/
+  #sidebar-wrapper {
+  position: fixed;
+  width: 170px;
+  height: auto;
+  margin-left: -200px;
+  background: rgb(241, 234, 191);
+  border-radius: 30px / 30px;
+
+  
+  
+  }
+  /*wrapper*/
+  #page-content-wrapper {
+    
+  width: 100%;
+  padding: 20px;
+  }
+  /* 사이드바 마우스 올렸을때 스타일 */
+  .sidebar-nav :hover{
+      background: rgb(192, 227, 248);
+      border-radius: 80px / 80px;
+  }
+  .sidebar-nav {
+  width: 170px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  }
+  
+  .sidebar-nav li {
+    
+  text-indent: 1.5em;
+  line-height: 2.8em;
+  }
+  
+  .sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color:black;
+  }
+  /*사이드바 제목(상단)기본 색*/
+  .sidebar-brand{
+    background: rgb(229, 206, 248);
+    width: 170px;
+    height: auto;
+  }
+  .wishList-List{
+    width: 80%;
+    height: auto;
+  }
