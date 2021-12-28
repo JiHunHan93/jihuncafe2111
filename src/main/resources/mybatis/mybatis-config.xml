@@ -13,6 +13,10 @@
  		<typeAlias alias="PaymentDTO" type="com.jihun.cafe.payment.model.dto.PaymentDTO"/>
  		<typeAlias alias="PaymentDivisionDTO" type="com.jihun.cafe.payment.model.dto.PaymentDivisionDTO"/>
  		<typeAlias alias="MemberPointDTO" type="com.jihun.cafe.member.model.dto.MemberPointDTO"/>
- 		<typeAlias alias="RoastingbeansMapper" type="com.jihun.cafe.roastingbeans.model.dao.RoastingbeansMapper"/>
+ 		<typeAlias alias="SearchReadyDTO" type="com.jihun.cafe.admin.model.dto.SearchReadyDTO"/>
+ 		<typeAlias alias="MemberManagementPageInfoDTO" type="com.jihun.cafe.admin.model.dto.MemberManagementPageInfoDTO"/>
+ 		<typeAlias alias="MemberModifyDTO" type="com.jihun.cafe.member.model.dto.MemberModifyDTO"/>
+ 		<typeAlias alias="MemberBlackListDTO" type="com.jihun.cafe.admin.model.dto.MemberBlackListDTO"/>
+ 		<typeAlias alias="MemberDetailDTO" type="com.jihun.cafe.admin.model.dto.MemberDetailDTO"/>
  	</typeAliases>
  </configuration>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC ".//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jihun.cafe.admin.model.dao.AdminMapper">
+
+	<resultMap type="com.jihun.cafe.member.model.dto.MemberDTO" id="memDTO">
+		<id property="no" column="MEMBER_NO" />
+		<result property="name" column="MEMBER_NAME" />
+		<result property="id" column="MEMBER_ID" />
+		<result property="pwd" column="MEMBER_PWD" />
+		<result property="pno" column="MEMBER_PNO" />
+		<result property="gender" column="MEMBER_GENDER" />
+		<result property="email" column="EMAIL" />
+		<result property="address" column="ADDRESS" />
+		<result property="phone" column="PHONE" />
+		<result property="subPhone" column="SUB_PHONE" />
+		<result property="point" column="MEMBER_POINT" />
+		<result property="enrollDate" column="ENROLL_DATE" />
+		<result property="modifiedDate" column="MODIFIED_DATE" />
+		<result property="blackList" column="CHECK_BLACKLIST" />
+		<result property="status" column="MEMBER_STATUS" />
+	</resultMap>
+	
+	<resultMap type="com.jihun.cafe.admin.model.dto.MemberDetailDTO" id="memDetailDTO">
+		<id property="no" column="MEMBER_NO" />
+		<result property="name" column="MEMBER_NAME" />
+		<result property="id" column="MEMBER_ID" />
+		<result property="pwd" column="MEMBER_PWD" />
+		<result property="pno" column="MEMBER_PNO" />
+		<result property="gender" column="MEMBER_GENDER" />
+		<result property="email" column="EMAIL" />
+		<result property="address" column="ADDRESS" />
+		<result property="phone" column="PHONE" />
+		<result property="subPhone" column="SUB_PHONE" />
+		<result property="point" column="MEMBER_POINT" />
+		<result property="enrollDate" column="ENROLL_DATE" />
+		<result property="modifiedDate" column="MODIFIED_DATE" />
+		<result property="blackList" column="CHECK_BLACKLIST" />
+		<result property="status" column="MEMBER_STATUS" />
+	</resultMap>
+
+	<resultMap type="com.jihun.cafe.admin.model.dto.SearchReadyDTO" id="searchDTO">
+		<id property="no" column="MEMBER_NO" />
+		<result property="name" column="MEMBER_NAME" />
+		<result property="id" column="MEMBER_ID" />
+		<result property="pwd" column="MEMBER_PWD" />
+		<result property="pno" column="MEMBER_PNO" />
+		<result property="gender" column="MEMBER_GENDER" />
+		<result property="email" column="EMAIL" />
+		<result property="address" column="ADDRESS" />
+		<result property="phone" column="PHONE" />
+		<result property="subPhone" column="SUB_PHONE" />
+		<result property="point" column="MEMBER_POINT" />
+		<result property="enrollDate" column="ENROLL_DATE" />
+		<result property="modifiedDate" column="MODIFIED_DATE" />
+		<result property="blackList" column="CHECK_BLACKLIST" />
+		<result property="status" column="MEMBER_STATUS" />
+	</resultMap>
+	
+	<resultMap type="com.jihun.cafe.admin.model.dto.MemberBlackListDTO" id="memberBlackListDTO">
+		<id property="no" column="BLACKLIST_NO" />
+		<result property="createdDate" column="CREATED_DATE" />
+		<result property="reasonInfo" column="REASON_INFO" />
+		<result property="status" column="BLACKLIST_STATUS" />
+		<result property="memberNo" column="MEMBER_NO" />
+	</resultMap>
+	
+	<resultMap type="com.jihun.cafe.member.model.dto.MemberModifyDTO" id="memberModifyDTO">
+		<id property="no" column="MODIFY_NO" />
+		<result property="column" column="ORIGIN_COLUMN" />
+		<result property="originInfo" column="ORIGIN_INFO" />
+		<result property="modifyInfo" column="MODIFY_INFO" />
+		<result property="modifiedDate" column="MODIFIED_DATE" />
+		<result property="memberNo" column="MEMBER_NO" />
+	</resultMap>
+	
+	<resultMap type="com.jihun.cafe.member.model.dto.MemberPointDTO" id="memberPointDTO">
+		<id property="no" column="POINT_NO" />
+		<result property="changedType" column="CHANGED_POINT_TYPE" />
+		<result property="paymentNo" column="PAYMENT_NO" />
+		<result property="modifyDate" column="MODIFY_DATE" />
+		<result property="modifyPoint" column="MODIFY_POINT" />
+		<result property="memberNo" column="MEMBER_NO" />
+	</resultMap>
+	
+	<select id="totalMemberList" resultType="_int">
+		SELECT 
+		       COUNT(*)
+		  FROM MG_MEMBER
+	</select> 
+	
+	<select id="mainMemberList" resultMap="memDTO" parameterType="MemberManagementPageInfoDTO">
+        SELECT 
+               A.RNUM
+		     , A.MEMBER_NO
+		     , A.MEMBER_NAME
+		     , A.MEMBER_ID
+		     , A.MEMBER_PNO
+             , A.MEMBER_GENDER
+		     , A.EMAIL
+             , A.ADDRESS
+             , A.PHONE
+             , A.SUB_PHONE
+             , A.MEMBER_POINT
+		     , A.ENROLL_DATE
+             , A.MODIFIED_DATE
+             , A.CHECK_BLACKLIST
+		     , A.MEMBER_STATUS
+	    FROM (SELECT ROWNUM RNUM
+		           , B.MEMBER_NO
+		           , B.MEMBER_NAME
+      		       , B.MEMBER_ID
+		           , B.MEMBER_PNO
+                   , B.MEMBER_GENDER
+		           , B.EMAIL
+                   , B.ADDRESS
+                   , B.PHONE
+                   , B.SUB_PHONE
+                   , B.MEMBER_POINT
+		           , B.ENROLL_DATE
+                   , B.MODIFIED_DATE
+                   , B.CHECK_BLACKLIST
+		           , B.MEMBER_STATUS
+	          FROM (SELECT 
+                           A.MEMBER_NO
+                         , A.MEMBER_NAME
+                         , A.MEMBER_ID
+                         , A.MEMBER_PNO
+                         , A.MEMBER_GENDER
+                         , A.EMAIL
+                         , A.ADDRESS
+                         , A.PHONE
+                         , A.SUB_PHONE
+                         , A.MEMBER_POINT
+                         , A.ENROLL_DATE
+                         , A.MODIFIED_DATE
+                         , A.CHECK_BLACKLIST
+                         , A.MEMBER_STATUS
+                    FROM MG_MEMBER A
+                   ORDER BY A.MEMBER_NO
+                   ) B
+             ) A           
+       WHERE RNUM BETWEEN #{ startRow } AND #{ endRow } 
+	</select>
+	
+	<select id="viewMgBlackCount" resultType="_int">
+        SELECT
+               COUNT(*)
+          FROM MG_MEMBER_BLACKLIST A
+         WHERE A.MEMBER_NO = #{ no }
+	</select> 
+	
+	<select id="viewMgModifyCount" resultType="_int">
+        SELECT
+               COUNT(*)
+          FROM MG_MEMBER_MODIFY A
+         WHERE A.MEMBER_NO = #{ no }
+	</select> 
+	
+	<select id="viewMgPointCount" resultType="_int">
+        SELECT
+               COUNT(*)
+          FROM MG_MEMBER_POINT A
+         WHERE A.MEMBER_NO = #{ no }
+	</select>
+	
+	<select id="viewMemberDetailInfo" resultMap="memDetailDTO">
+        SELECT 
+               A.MEMBER_NO
+             , A.MEMBER_NAME
+             , A.MEMBER_ID
+             , A.MEMBER_PNO
+             , A.MEMBER_GENDER
+             , A.EMAIL
+             , A.ADDRESS
+             , A.PHONE
+             , A.SUB_PHONE
+             , A.MEMBER_POINT
+             , A.ENROLL_DATE
+             , A.MODIFIED_DATE
+             , A.CHECK_BLACKLIST
+             , A.MEMBER_STATUS
+        FROM MG_MEMBER A
+       WHERE A.MEMBER_NO = #{ no }
+	</select>
+	
+	<select id="viewMgBlackListlInfo" resultMap="memberBlackListDTO" parameterType="MemberManagementPageInfoDTO">
+        SELECT A.RNUM
+             , A.BLACKLIST_NO
+             , A.CREATED_DATE
+             , A.REASON_INFO
+             , A.MEMBER_NO
+             , A.BLACKLIST_STATUS
+        FROM (SELECT ROWNUM RNUM
+                   , B.BLACKLIST_NO
+                   , B.CREATED_DATE
+                   , B.REASON_INFO
+                   , B.MEMBER_NO
+                   , B.BLACKLIST_STATUS
+              FROM (SELECT A.BLACKLIST_NO
+                         , A.CREATED_DATE
+                         , A.REASON_INFO
+                         , B.MEMBER_NO
+                         , A.BLACKLIST_STATUS
+                    FROM MG_MEMBER_BLACKLIST A
+                    JOIN MG_MEMBER B ON (A.MEMBER_NO = B.MEMBER_NO)
+                   WHERE A.MEMBER_NO = #{ memberNo }
+                   ORDER BY BLACKLIST_NO DESC) B
+                   ) A
+              WHERE RNUM BETWEEN #{ startRow } AND #{ endRow }    
+	</select>
+	
+	<select id="viewMgModifyListlInfo" resultMap="memberModifyDTO" parameterType="MemberManagementPageInfoDTO">
+        SELECT A.RNUM
+             , A.MODIFY_NO
+             , A.ORIGIN_COLUMN
+             , A.ORIGIN_INFO
+             , A.MODIFY_INFO
+             , A.MODIFIED_DATE
+             , A.MEMBER_NO
+        FROM (SELECT ROWNUM RNUM
+                   , B.MODIFY_NO
+                   , B.ORIGIN_COLUMN
+                   , B.ORIGIN_INFO
+                   , B.MODIFY_INFO
+                   , B.MODIFIED_DATE
+                   , B.MEMBER_NO
+              FROM (SELECT A.MODIFY_NO
+                         , A.ORIGIN_COLUMN
+                         , A.ORIGIN_INFO
+                         , A.MODIFY_INFO
+                         , A.MODIFIED_DATE
+                         , A.MEMBER_NO
+                    FROM MG_MEMBER_MODIFY A
+                   WHERE A.MEMBER_NO = #{ memberNo }
+                   ORDER BY MODIFY_NO DESC) B
+                   ) A
+              WHERE RNUM BETWEEN #{ startRow } AND #{ endRow }     
+	</select>
+	
+	<select id="viewMgPointListlInfo" resultMap="memberPointDTO" parameterType="MemberManagementPageInfoDTO">
+        SELECT A.RNUM
+             , A.POINT_NO
+             , A.CHANGED_POINT_TYPE
+             , A.PAYMENT_NO
+             , A.MODIFY_DATE
+             , A.MODIFY_POINT
+             , A.MEMBER_NO
+        FROM (SELECT ROWNUM RNUM
+                   , B.POINT_NO
+                   , B.CHANGED_POINT_TYPE
+                   , B.PAYMENT_NO
+                   , B.MODIFY_DATE
+                   , B.MODIFY_POINT
+                   , B.MEMBER_NO
+              FROM (SELECT A.POINT_NO
+                         , A.CHANGED_POINT_TYPE
+                         , A.PAYMENT_NO
+                         , A.MODIFY_DATE
+                         , A.MODIFY_POINT
+                         , A.MEMBER_NO
+                    FROM MG_MEMBER_POINT A
+                   WHERE A.MEMBER_NO = #{ memberNo }
+                   ORDER BY POINT_NO DESC) B
+                   ) A
+              WHERE RNUM BETWEEN #{ startRow } AND #{ endRow }      
+	</select>
+	
+	<insert id="insertBlackList" parameterType="memberBlackListDTO">
+        INSERT
+          INTO MG_MEMBER_BLACKLIST A
+        (
+          A.BLACKLIST_NO, A.REASON_INFO, A.MEMBER_NO, A.BLACKLIST_STATUS
+        )
+        VALUES
+        (
+          SEQ_MEM_BLACKLIST_NO.NEXTVAL, #{ reasonInfo }, #{ memberNo }, #{ status }
+        )
+	</insert> 
+	
+	<select id="selectMgOriginalInfo" resultType="string" parameterType="_int">
+        SELECT
+               A.CHECK_BLACKLIST
+          FROM MG_MEMBER A
+         WHERE A.MEMBER_NO = #{ pageNo }
+	</select>
+	
+	<insert id="insertMgModify" parameterType="memberModifyDTO">
+        INSERT
+          INTO MG_MEMBER_MODIFY A
+        (
+          A.MODIFY_NO, A.ORIGIN_COLUMN, A.ORIGIN_INFO, A.MODIFY_INFO, A.MEMBER_NO
+        )
+        VALUES
+        (
+          SEQ_MEM_MODIFY_NO.NEXTVAL, #{ column }, #{ originInfo }, #{ modifyInfo }, #{ memberNo }
+        )
+	</insert>
+	
+	<update id="updateMgBlackColumn" parameterType="memberModifyDTO">
+        UPDATE
+               MG_MEMBER M
+           SET M.CHECK_BLACKLIST = #{ modifyInfo }
+             , M.MODIFIED_DATE = SYSDATE 
+         WHERE M.MEMBER_NO = #{ memberNo }
+	</update>
+</mapper>

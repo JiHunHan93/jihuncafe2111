@@ -64,6 +64,7 @@
 		
 	
 	<mybatis-spring:scan base-package="com.jihun.cafe.member.model.dao,
+	                                   com.jihun.cafe.admin.model.dao,
 	                                   com.jihun.cafe.cannedcoffee.model.dao,
 	                                   com.jihun.cafe.coldbrew.model.dao,
 	                                   com.jihun.cafe.greenbeans.model.dao,
