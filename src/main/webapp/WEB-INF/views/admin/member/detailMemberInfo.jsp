@@ -409,12 +409,6 @@
 												</div>
 											</div>
 											<script>
-												/* 							window.onload = function() {
-												 console.log("숨김완료");
-												 console.log('${ pageNumNo }');
-												 $("#mgBlackFinish").css("display","none");
-												
-												 } */
 
 													$("#modifyButton").click(function() {
 														$("#modifyButton").css("display","none");
@@ -435,9 +429,6 @@
 																	data: {reason : reason, status : status, pageNo : pageNo},
 																	success: function(data, textStatus, xhr) {
 																		document.getElementById("mgBlackReason").innerHTML = data;
-															/* 			$("#mgBlackFinish").css("display", "none");
-																		$("#mgBlackReason").attr('readonly', true);
-																		$("#modifyButton").css("display", "block"); */
 																		console.log("변경 완료");
 																		console.log(data);
 																		location.href = "${ pageContext.servletContext.contextPath }/admin/member/manage/detail?no=" + pageNo;
@@ -448,8 +439,6 @@
 																	}
 																});
 																
-																
-																
 																alert("변경 완료");
 															} else {
 																alert("변경 취소");
@@ -457,7 +446,7 @@
 															
 														});
 													});
-												</script>
+											</script>
 											<br><br><br><br><br><br><br><br><br><br><br><br>
 											<!-- /row -->
 											<h4>My Friends</h4>

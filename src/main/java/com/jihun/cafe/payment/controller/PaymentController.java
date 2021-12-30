@@ -64,21 +64,8 @@ public class PaymentController {
 		
 		UserDetailsVO user = (UserDetailsVO) authentication.getPrincipal();
 
-		System.out.println("=====================================================================================");
-		
-		System.out.println("받아온 order : " + order);
-		System.out.println("받아온 orderGoods : " + orderGoods);
-		System.out.println("받아온 orderDelivery : " + orderDelivery);
-		System.out.println("받아온 orderAddress : " + orderAddress);
-		System.out.println("받아온 payment : " + payment);
-		System.out.println("받아온 paymentDivision : " + paymentDivision);
-		System.out.println("받아온 currentDate : " + currentDate);
 		order.setOrderDate(java.sql.Date.valueOf(currentDate));
 		payment.setPaymentDate(java.sql.Date.valueOf(currentDate));
-		System.out.println(order.getOrderDate());
-		
-		
-		System.out.println("=====================================================================================");
 		
 		/* 1. 주문 테이블  */
 		int result1 = pay.insertOrder(order);
@@ -115,7 +102,6 @@ public class PaymentController {
 			System.out.println("승인번호 포인트 : " + result6);
 			
 			MemberPointDTO point = new MemberPointDTO("사용", java.sql.Date.valueOf(currentDate), order.getExistingPoint(), order.getExistingPoint() - payment.getUsedPoint(), order.getMemberNo(), "POINT");
-			System.out.println(point);
 			int result7 = pay.insertMemberPointInfo(point);
 			System.out.println("최종 결과가 3입니까? : " + result7);
 		
@@ -135,7 +121,6 @@ public class PaymentController {
 			
 			System.out.println("사용 포인트 : " + payment.getUsedPoint());
 			MemberPointDTO point = new MemberPointDTO("사용", java.sql.Date.valueOf(currentDate), order.getExistingPoint(), order.getExistingPoint() - payment.getUsedPoint(), order.getMemberNo(), "POINT");
-			System.out.println(point);
 			int result7 = pay.insertMemberPointInfo(point);
 			System.out.println("최종 결과가 3입니까? : " + result7);
 			
@@ -144,9 +129,8 @@ public class PaymentController {
 		
 		/* 8. Insert 성공 여부에 따른 출력 message 입력*/
 		String message = "";
-		int result = 10;
-		if(result > 8) {
-			message = "원 결제가 완료되었습니다.";
+		if(result5 > 0) {
+			message = "결제가 완료되었습니다.";
 			System.out.println("최종 결과 확인");
 		} else {
 			message = "결제 처리 중 내부 오류 발생";

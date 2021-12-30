@@ -60,13 +60,11 @@ public class AdminController {
 		searchMember.getPageInfo().setLimit(10);
 		searchMember.getPageInfo().setButtonAmount(5);
 		
-		System.out.println("이건 뭐야1 ? : " + searchMember);
-		
 		List<MemberDTO> mgList = admin.mainMemberList(Pagenation.getSearchPage(searchMember));
 		
 		
 		for(MemberDTO member : mgList) {
-			System.out.println("향상된 for문" + member);
+			System.out.println("가입한 회원목록" + member);
 		}
 		
 		model.addAttribute("mgList", mgList);

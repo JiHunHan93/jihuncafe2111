@@ -39,6 +39,14 @@ window.onload = function() {
 
 	}
 	
+	if(document.getElementById("adminPage")) {
+		const $logout = document.getElementById("adminPage");
+		$logout.onclick = function() {
+			location.href = "/cafe/admin/";
+		}
+
+	}
+	
 	if(document.getElementById("update")) {
 		const $update = document.getElementById("update");
 		$update.onclick = function() {

@@ -524,7 +524,6 @@
                             
                             <div id="paybutton">
                             	<a id="gogo" class="pay_btn">주문하기</a>
-                            	<a id="gogoTest" class="pay_btn">테스트</a>
                                 <a href="javascript:order_cancel('cancel')" class="can_btn">주문취소</a>
                             </div>
                             
@@ -650,13 +649,9 @@
                     success : function(data, textStatus, xhr) {
                      console.log($('#slimPhoneFirst').val());
                    	 alert(data);
-                   	 console.log('왜 안되냐 : ')
-                   	 console.log('왜 안되냐 : ' + data)
-                   	 console.log('왜 안되냐 : ' + data[2])
                    	location.href= '${ pageContext.servletContext.contextPath }/main';
                     },
                     error : function(xhr, status, error) {
-                    	console.log('왜 안되냐 : 설마 실패임?')
                     }
                 });
                 

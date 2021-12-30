@@ -37,7 +37,7 @@
 	<select id="selectUserAuthone" resultType="java.lang.String" parameterType="String">
         SELECT
                A.ROLE_NAME
-          FROM BB_ROLE A
+          FROM MG_ROLE A
           JOIN MG_MEMBER B ON (A.MEMBER_NO = B.MEMBER_NO)     
          WHERE B.MEMBER_ID = #{ email } 
 	</select>

@@ -33,6 +33,9 @@
             	<c:if test="${ ! empty sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal }"> 
                 <li class="fr"><input type="button" value="로그아웃" id="logout" class="login-btn btn-yg" style="font-size: 12px;"></input></li>
             	</c:if>
+            	<c:if test="${ sessionScope.SPRING_SECURITY_CONTEXT.authentication.principal.authorities[0] eq 'ROLE_ADMIN' }"> 
+                <li class="fr"><input type="button" value="관리자페이지" id="adminPage" class="login-btn btn-yg" style="font-size: 12px;"></input></li>
+            	</c:if>
             </ul>
 
             <h1><a href="${ pageContext.servletContext.contextPath }" title=""><img src="/mg/resources/image/Logo1(2).png" alt="" class="main_header_img_logo_1"></a></h1>

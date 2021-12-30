@@ -10,7 +10,6 @@ public class MainController {
 	public String mainPage() {
 		
 		System.out.println("=======================");
-		System.out.println("===== 스프링 적용 전  ======");
 		System.out.println("===== 메인 페이지로 이동  ===");
 		System.out.println("=======================");
 		
